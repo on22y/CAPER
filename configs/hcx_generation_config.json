@@ -1,0 +1,25 @@
+{
+  "model_id": "naver-hyperclovax/HyperCLOVAX-SEED-Think-14B",
+  "local_path": "/home/user20250805/gayeon/HCLT2026/models/HyperCLOVAX-SEED-Think-14B",
+  "backend": "transformers",
+  "inference_backend": "transformers",
+  "dtype": "bfloat16",
+  "attention_implementation": "sdpa",
+  "device_map": "auto: GPU0/GPU1 model-parallel split",
+  "gpu_configuration": "CUDA_VISIBLE_DEVICES=0,1 with device_map=auto for HyperCLOVAX",
+  "use_cache": true,
+  "skip_reasoning": true,
+  "reasoning_setting": {
+    "skip_reasoning": true
+  },
+  "chat_template": "native tokenizer.apply_chat_template",
+  "seed_rule": "int(SHA256(sample_id + '|A' or '|B')[:8], 16)",
+  "do_sample": true,
+  "temperature": 0.7,
+  "top_p": 0.9,
+  "repetition_penalty": 1.05,
+  "max_new_tokens": 1536,
+  "batch_size": 1,
+  "model_revision": "HyperCLOVAX-SEED-Think-14B",
+  "instruction_sha256": "ff5528cc65e6f378e2f05c6fe4c05c7d7367509c731fe0e31c35721ccd63a798"
+}

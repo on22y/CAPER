@@ -1,0 +1,20 @@
+{
+  "exaone": {
+    "model_name": "exaone",
+    "model_id": "LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct",
+    "revision": "553ea250b9a5317231459279d5847d6cf955b9aa",
+    "local_path": "/home/user20250805/.cache/huggingface/hub/models--LGAI-EXAONE--EXAONE-3.5-7.8B-Instruct/snapshots/553ea250b9a5317231459279d5847d6cf955b9aa"
+  },
+  "qwen3": {
+    "model_name": "qwen3",
+    "model_id": "Qwen/Qwen3-8B",
+    "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "local_path": "/home/user20250805/.cache/huggingface/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218"
+  },
+  "ministral3": {
+    "model_name": "ministral3",
+    "model_id": "mistralai/Ministral-3-8B-Instruct-2512",
+    "revision": "5b26027e7b19eeb4b7352e1fed3926375dd2cb4d",
+    "local_path": "/home/user20250805/.cache/huggingface/hub/models--mistralai--Ministral-3-8B-Instruct-2512/snapshots/5b26027e7b19eeb4b7352e1fed3926375dd2cb4d"
+  }
+}

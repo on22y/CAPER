@@ -1,0 +1,52 @@
+{
+  "root": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo900_mode_jury_v1",
+  "raw_root": "/home/user20250805/gayeon/HCLT2026/data/raw",
+  "train_target": {
+    "news": 300,
+    "petition": 300,
+    "sns": 300
+  },
+  "heldout_target": {
+    "news": 17,
+    "petition": 17,
+    "sns": 17
+  },
+  "generation_expected": 1800,
+  "jury_expected_max": 5400,
+  "frozen_prompts": {
+    "generation": {
+      "path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo900_mode_jury_v1/prompts/generation_prompt_reference.txt",
+      "sha256": "2dc0e8c95264168dca7d19568cf9c6fb7e0cc273994bcce6a592e7493459f8e5"
+    },
+    "qwen": {
+      "path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo900_mode_jury_v1/prompts/qwen_frozen_prompt_reference.txt",
+      "sha256": "a033f195adec429806f57e8b69a27bf343677b817bacc1850b6ba405aef09723"
+    },
+    "qwen_user": {
+      "path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo900_mode_jury_v1/prompts/qwen_frozen_user_template.txt",
+      "sha256": "4df6d32444af8e15d645b270b050de622e74b1e2937f644368fa47a48910b598"
+    },
+    "granite": {
+      "path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo900_mode_jury_v1/prompts/granite_frozen_prompt_reference.txt",
+      "sha256": "904a8db88c8210a59bb009de2c5492f9f7d44ac26f3911fcb2084190e8f7cfd3"
+    },
+    "direct_user": {
+      "path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo900_mode_jury_v1/prompts/direct_expressive_user_template.txt",
+      "sha256": "b486b98d4cc1a562e46760b00557a4aea07f039310d71c170ba8fecc4e54c510"
+    },
+    "ministral": {
+      "path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo900_mode_jury_v1/prompts/ministral_frozen_prompt_reference.txt",
+      "sha256": "4ab52ff34c496f23adaf6e6b524a48b748eb2bd7ecab06327d81c699fb31f25a"
+    }
+  },
+  "reused_scripts": {
+    "generation_v3": "/home/user20250805/gayeon/HCLT2026/work/hcx_rewrite_prompt_v3_mode_margin_pilot30_v1/scripts/run_v3_generation.py",
+    "generation_base": "/home/user20250805/gayeon/HCLT2026/work/hcx_pairwise_expand300_v1/scripts/run_expand300_rewrite_generation.py",
+    "qwen": "/home/user20250805/gayeon/HCLT2026/work/hcx_v3_direct_expr_jury28_v1/scripts/run_direct_expr_jury.py",
+    "granite": "/home/user20250805/gayeon/HCLT2026/work/hcx_v3_direct_expr_jury28_granite_command_v1/scripts/run_granite_command_jury28.py",
+    "ministral": "/home/user20250805/gayeon/HCLT2026/work/hcx_v3_direct_expr_jury28_command_ministral_v3/scripts/run_command_ministral_v3.py"
+  },
+  "aggregation_rule": ">=2 stable judges same actual winner",
+  "gpt_openai_calls": 0,
+  "rough_eta": "HCX generation dominates; based on prior 240 rewrites about 83-90 min, 1800 rewrites roughly 10-12 hours plus jury time"
+}

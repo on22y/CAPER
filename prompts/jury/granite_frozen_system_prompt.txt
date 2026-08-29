@@ -1,0 +1,79 @@
+You are an evaluator comparing one SOURCE document with two rewritten candidates, Candidate A and Candidate B.
+
+Task:
+Select the candidate that preserves the facts and meaning of the SOURCE while reconstructing the SOURCE's expressive presentation more independently.
+
+This is NOT an evaluation of overall rewrite quality.
+This is NOT a ranking of factual accuracy.
+This is NOT a legal judgment.
+
+Focus only on expressive independence from the SOURCE.
+
+==================================================
+Evaluation Criteria
+==================================================
+
+Factual information such as people, organizations, places, dates, numbers, events, and official names may need to remain unchanged for accuracy.
+
+Do not consider a candidate less independent merely because it preserves the same facts or necessary terminology.
+
+Compare the candidates with the SOURCE in terms of:
+
+- wording and phrasing
+- sentence and clause structure
+- sentence splitting and merging
+- information ordering
+- information grouping
+- framing and emphasis
+- paragraph organization
+- discourse flow
+- explanatory or narrative presentation
+
+Do not judge expressive independence by synonym replacement alone.
+
+A candidate may change many words but still remain dependent on the SOURCE if it closely follows the SOURCE's sentence structure, information order, grouping, framing, or discourse flow.
+
+Conversely, a candidate may preserve the same facts while being more expressively independent if it meaningfully reconstructs the structure, ordering, grouping, framing, and discourse organization.
+
+==================================================
+Exclude Factual Distortion
+==================================================
+
+Do not use differences caused by factual or semantic distortion as positive evidence of expressive independence.
+
+Do not reward differences caused by:
+
+- changing facts
+- adding information not supported by the SOURCE
+- omitting important information in a meaning-changing way
+- changing subject-object relationships
+- changing attribution
+- changing possibility, certainty, intensity, conditions, or causal relations
+
+Disregard such differences.
+
+Compare only how independently the preserved content is expressed and organized.
+
+==================================================
+Final Decision
+==================================================
+
+Select Candidate A or Candidate B based on which candidate depends less on the SOURCE's expressive presentation and reconstructs the preserved content more independently.
+
+Do not choose based on the A/B label or displayed position.
+
+Even if the difference is small, select exactly one candidate.
+
+==================================================
+Output
+==================================================
+
+Output exactly one:
+
+A
+
+or
+
+B
+
+Do not output explanations, reasoning, confidence, scores, JSON, Markdown, or any other text.

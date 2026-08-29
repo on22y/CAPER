@@ -1,0 +1,514 @@
+{
+  "tokenizer_path": "/home/user20250805/gayeon/HCLT2026/models/HyperCLOVAX-SEED-Think-14B",
+  "num_examples": 501,
+  "method": "DPOTrainer plain tokenizer over preformatted prompt/chosen/rejected strings",
+  "stats": {
+    "prompt": {
+      "min": 1778,
+      "median": 1881.0,
+      "p90": 2199.0,
+      "p95": 2336.0,
+      "p99": 2735.0,
+      "max": 3774
+    },
+    "chosen_completion": {
+      "min": 99,
+      "median": 216.0,
+      "p90": 427.0,
+      "p95": 579.0,
+      "p99": 829.0,
+      "max": 1287
+    },
+    "rejected_completion": {
+      "min": 35,
+      "median": 186.0,
+      "p90": 433.0,
+      "p95": 563.0,
+      "p99": 770.0,
+      "max": 1369
+    },
+    "prompt_chosen": {
+      "min": 1886,
+      "median": 2086.0,
+      "p90": 2626.0,
+      "p95": 2920.0,
+      "p99": 3593.0,
+      "max": 5061
+    },
+    "prompt_rejected": {
+      "min": 1873,
+      "median": 2074.0,
+      "p90": 2655.0,
+      "p95": 2921.0,
+      "p99": 3386.0,
+      "max": 5143
+    }
+  },
+  "max_observed_total": 5143,
+  "recommended_max_length_no_truncation": 3072,
+  "effective_max_length_for_training": 3072,
+  "truncation_mode": "keep_start",
+  "canonical_input_rows": 501,
+  "prompt_filter_passed": 498,
+  "prompt_length_dropped": 3,
+  "completion_untruncated": 481,
+  "completion_partially_truncated": 17,
+  "effective_training_rows": 498,
+  "estimated_total_optimization_steps": 375,
+  "prompt_length_drops": [
+    {
+      "sample_id": "dpo900_train_petition_074",
+      "domain": "petition",
+      "prompt": 3496,
+      "chosen_completion": 651,
+      "rejected_completion": 431,
+      "prompt_chosen": 4147,
+      "prompt_rejected": 3927
+    },
+    {
+      "sample_id": "dpo900_train_petition_083",
+      "domain": "petition",
+      "prompt": 3774,
+      "chosen_completion": 1287,
+      "rejected_completion": 1369,
+      "prompt_chosen": 5061,
+      "prompt_rejected": 5143
+    },
+    {
+      "sample_id": "dpo900_train_petition_210",
+      "domain": "petition",
+      "prompt": 3598,
+      "chosen_completion": 1107,
+      "rejected_completion": 1113,
+      "prompt_chosen": 4705,
+      "prompt_rejected": 4711
+    }
+  ],
+  "completion_truncated_examples": [
+    {
+      "sample_id": "dpo900_train_news_034",
+      "domain": "news",
+      "prompt": 2489,
+      "chosen_completion": 755,
+      "rejected_completion": 679,
+      "prompt_chosen": 3244,
+      "prompt_rejected": 3168
+    },
+    {
+      "sample_id": "dpo900_train_news_042",
+      "domain": "news",
+      "prompt": 2654,
+      "chosen_completion": 1011,
+      "rejected_completion": 1069,
+      "prompt_chosen": 3665,
+      "prompt_rejected": 3723
+    },
+    {
+      "sample_id": "dpo900_train_news_152",
+      "domain": "news",
+      "prompt": 2450,
+      "chosen_completion": 739,
+      "rejected_completion": 728,
+      "prompt_chosen": 3189,
+      "prompt_rejected": 3178
+    },
+    {
+      "sample_id": "dpo900_train_news_162",
+      "domain": "news",
+      "prompt": 2448,
+      "chosen_completion": 765,
+      "rejected_completion": 733,
+      "prompt_chosen": 3213,
+      "prompt_rejected": 3181
+    },
+    {
+      "sample_id": "dpo900_train_news_178",
+      "domain": "news",
+      "prompt": 2576,
+      "chosen_completion": 519,
+      "rejected_completion": 869,
+      "prompt_chosen": 3095,
+      "prompt_rejected": 3445
+    },
+    {
+      "sample_id": "dpo900_train_news_210",
+      "domain": "news",
+      "prompt": 2536,
+      "chosen_completion": 799,
+      "rejected_completion": 770,
+      "prompt_chosen": 3335,
+      "prompt_rejected": 3306
+    },
+    {
+      "sample_id": "dpo900_train_news_220",
+      "domain": "news",
+      "prompt": 2630,
+      "chosen_completion": 829,
+      "rejected_completion": 392,
+      "prompt_chosen": 3459,
+      "prompt_rejected": 3022
+    },
+    {
+      "sample_id": "dpo900_train_news_233",
+      "domain": "news",
+      "prompt": 2735,
+      "chosen_completion": 858,
+      "rejected_completion": 577,
+      "prompt_chosen": 3593,
+      "prompt_rejected": 3312
+    },
+    {
+      "sample_id": "dpo900_train_petition_003",
+      "domain": "petition",
+      "prompt": 2836,
+      "chosen_completion": 919,
+      "rejected_completion": 464,
+      "prompt_chosen": 3755,
+      "prompt_rejected": 3300
+    },
+    {
+      "sample_id": "dpo900_train_petition_031",
+      "domain": "petition",
+      "prompt": 2546,
+      "chosen_completion": 751,
+      "rejected_completion": 511,
+      "prompt_chosen": 3297,
+      "prompt_rejected": 3057
+    },
+    {
+      "sample_id": "dpo900_train_petition_129",
+      "domain": "petition",
+      "prompt": 2572,
+      "chosen_completion": 799,
+      "rejected_completion": 814,
+      "prompt_chosen": 3371,
+      "prompt_rejected": 3386
+    },
+    {
+      "sample_id": "dpo900_train_petition_164",
+      "domain": "petition",
+      "prompt": 2492,
+      "chosen_completion": 608,
+      "rejected_completion": 481,
+      "prompt_chosen": 3100,
+      "prompt_rejected": 2973
+    },
+    {
+      "sample_id": "dpo900_train_petition_169",
+      "domain": "petition",
+      "prompt": 2583,
+      "chosen_completion": 667,
+      "rejected_completion": 514,
+      "prompt_chosen": 3250,
+      "prompt_rejected": 3097
+    },
+    {
+      "sample_id": "dpo900_train_petition_203",
+      "domain": "petition",
+      "prompt": 2453,
+      "chosen_completion": 640,
+      "rejected_completion": 623,
+      "prompt_chosen": 3093,
+      "prompt_rejected": 3076
+    },
+    {
+      "sample_id": "dpo900_train_petition_219",
+      "domain": "petition",
+      "prompt": 2466,
+      "chosen_completion": 707,
+      "rejected_completion": 690,
+      "prompt_chosen": 3173,
+      "prompt_rejected": 3156
+    },
+    {
+      "sample_id": "dpo900_train_petition_226",
+      "domain": "petition",
+      "prompt": 2756,
+      "chosen_completion": 579,
+      "rejected_completion": 330,
+      "prompt_chosen": 3335,
+      "prompt_rejected": 3086
+    },
+    {
+      "sample_id": "dpo900_train_petition_295",
+      "domain": "petition",
+      "prompt": 2486,
+      "chosen_completion": 551,
+      "rejected_completion": 734,
+      "prompt_chosen": 3037,
+      "prompt_rejected": 3220
+    }
+  ],
+  "longest_examples": [
+    {
+      "sample_id": "dpo900_train_petition_083",
+      "domain": "petition",
+      "prompt": 3774,
+      "chosen_completion": 1287,
+      "rejected_completion": 1369,
+      "prompt_chosen": 5061,
+      "prompt_rejected": 5143
+    },
+    {
+      "sample_id": "dpo900_train_petition_210",
+      "domain": "petition",
+      "prompt": 3598,
+      "chosen_completion": 1107,
+      "rejected_completion": 1113,
+      "prompt_chosen": 4705,
+      "prompt_rejected": 4711
+    },
+    {
+      "sample_id": "dpo900_train_petition_074",
+      "domain": "petition",
+      "prompt": 3496,
+      "chosen_completion": 651,
+      "rejected_completion": 431,
+      "prompt_chosen": 4147,
+      "prompt_rejected": 3927
+    },
+    {
+      "sample_id": "dpo900_train_petition_003",
+      "domain": "petition",
+      "prompt": 2836,
+      "chosen_completion": 919,
+      "rejected_completion": 464,
+      "prompt_chosen": 3755,
+      "prompt_rejected": 3300
+    },
+    {
+      "sample_id": "dpo900_train_news_042",
+      "domain": "news",
+      "prompt": 2654,
+      "chosen_completion": 1011,
+      "rejected_completion": 1069,
+      "prompt_chosen": 3665,
+      "prompt_rejected": 3723
+    },
+    {
+      "sample_id": "dpo900_train_news_233",
+      "domain": "news",
+      "prompt": 2735,
+      "chosen_completion": 858,
+      "rejected_completion": 577,
+      "prompt_chosen": 3593,
+      "prompt_rejected": 3312
+    },
+    {
+      "sample_id": "dpo900_train_news_220",
+      "domain": "news",
+      "prompt": 2630,
+      "chosen_completion": 829,
+      "rejected_completion": 392,
+      "prompt_chosen": 3459,
+      "prompt_rejected": 3022
+    },
+    {
+      "sample_id": "dpo900_train_news_178",
+      "domain": "news",
+      "prompt": 2576,
+      "chosen_completion": 519,
+      "rejected_completion": 869,
+      "prompt_chosen": 3095,
+      "prompt_rejected": 3445
+    },
+    {
+      "sample_id": "dpo900_train_petition_129",
+      "domain": "petition",
+      "prompt": 2572,
+      "chosen_completion": 799,
+      "rejected_completion": 814,
+      "prompt_chosen": 3371,
+      "prompt_rejected": 3386
+    },
+    {
+      "sample_id": "dpo900_train_news_210",
+      "domain": "news",
+      "prompt": 2536,
+      "chosen_completion": 799,
+      "rejected_completion": 770,
+      "prompt_chosen": 3335,
+      "prompt_rejected": 3306
+    },
+    {
+      "sample_id": "dpo900_train_petition_226",
+      "domain": "petition",
+      "prompt": 2756,
+      "chosen_completion": 579,
+      "rejected_completion": 330,
+      "prompt_chosen": 3335,
+      "prompt_rejected": 3086
+    },
+    {
+      "sample_id": "dpo900_train_petition_031",
+      "domain": "petition",
+      "prompt": 2546,
+      "chosen_completion": 751,
+      "rejected_completion": 511,
+      "prompt_chosen": 3297,
+      "prompt_rejected": 3057
+    },
+    {
+      "sample_id": "dpo900_train_petition_169",
+      "domain": "petition",
+      "prompt": 2583,
+      "chosen_completion": 667,
+      "rejected_completion": 514,
+      "prompt_chosen": 3250,
+      "prompt_rejected": 3097
+    },
+    {
+      "sample_id": "dpo900_train_news_034",
+      "domain": "news",
+      "prompt": 2489,
+      "chosen_completion": 755,
+      "rejected_completion": 679,
+      "prompt_chosen": 3244,
+      "prompt_rejected": 3168
+    },
+    {
+      "sample_id": "dpo900_train_petition_295",
+      "domain": "petition",
+      "prompt": 2486,
+      "chosen_completion": 551,
+      "rejected_completion": 734,
+      "prompt_chosen": 3037,
+      "prompt_rejected": 3220
+    },
+    {
+      "sample_id": "dpo900_train_news_162",
+      "domain": "news",
+      "prompt": 2448,
+      "chosen_completion": 765,
+      "rejected_completion": 733,
+      "prompt_chosen": 3213,
+      "prompt_rejected": 3181
+    },
+    {
+      "sample_id": "dpo900_train_news_152",
+      "domain": "news",
+      "prompt": 2450,
+      "chosen_completion": 739,
+      "rejected_completion": 728,
+      "prompt_chosen": 3189,
+      "prompt_rejected": 3178
+    },
+    {
+      "sample_id": "dpo900_train_petition_219",
+      "domain": "petition",
+      "prompt": 2466,
+      "chosen_completion": 707,
+      "rejected_completion": 690,
+      "prompt_chosen": 3173,
+      "prompt_rejected": 3156
+    },
+    {
+      "sample_id": "dpo900_train_petition_164",
+      "domain": "petition",
+      "prompt": 2492,
+      "chosen_completion": 608,
+      "rejected_completion": 481,
+      "prompt_chosen": 3100,
+      "prompt_rejected": 2973
+    },
+    {
+      "sample_id": "dpo900_train_petition_203",
+      "domain": "petition",
+      "prompt": 2453,
+      "chosen_completion": 640,
+      "rejected_completion": 623,
+      "prompt_chosen": 3093,
+      "prompt_rejected": 3076
+    },
+    {
+      "sample_id": "dpo900_train_news_144",
+      "domain": "news",
+      "prompt": 2442,
+      "chosen_completion": 592,
+      "rejected_completion": 614,
+      "prompt_chosen": 3034,
+      "prompt_rejected": 3056
+    },
+    {
+      "sample_id": "dpo900_train_petition_037",
+      "domain": "petition",
+      "prompt": 2426,
+      "chosen_completion": 601,
+      "rejected_completion": 630,
+      "prompt_chosen": 3027,
+      "prompt_rejected": 3056
+    },
+    {
+      "sample_id": "dpo900_train_news_287",
+      "domain": "news",
+      "prompt": 2351,
+      "chosen_completion": 620,
+      "rejected_completion": 687,
+      "prompt_chosen": 2971,
+      "prompt_rejected": 3038
+    },
+    {
+      "sample_id": "dpo900_train_news_081",
+      "domain": "news",
+      "prompt": 2359,
+      "chosen_completion": 667,
+      "rejected_completion": 607,
+      "prompt_chosen": 3026,
+      "prompt_rejected": 2966
+    },
+    {
+      "sample_id": "dpo900_train_news_296",
+      "domain": "news",
+      "prompt": 2346,
+      "chosen_completion": 598,
+      "rejected_completion": 572,
+      "prompt_chosen": 2944,
+      "prompt_rejected": 2918
+    },
+    {
+      "sample_id": "dpo900_train_news_183",
+      "domain": "news",
+      "prompt": 2311,
+      "chosen_completion": 584,
+      "rejected_completion": 622,
+      "prompt_chosen": 2895,
+      "prompt_rejected": 2933
+    },
+    {
+      "sample_id": "dpo900_train_news_239",
+      "domain": "news",
+      "prompt": 2336,
+      "chosen_completion": 504,
+      "rejected_completion": 585,
+      "prompt_chosen": 2840,
+      "prompt_rejected": 2921
+    },
+    {
+      "sample_id": "dpo900_train_news_026",
+      "domain": "news",
+      "prompt": 2295,
+      "chosen_completion": 396,
+      "rejected_completion": 625,
+      "prompt_chosen": 2691,
+      "prompt_rejected": 2920
+    },
+    {
+      "sample_id": "dpo900_train_news_189",
+      "domain": "news",
+      "prompt": 2303,
+      "chosen_completion": 617,
+      "rejected_completion": 564,
+      "prompt_chosen": 2920,
+      "prompt_rejected": 2867
+    },
+    {
+      "sample_id": "dpo900_train_news_092",
+      "domain": "news",
+      "prompt": 2293,
+      "chosen_completion": 565,
+      "rejected_completion": 620,
+      "prompt_chosen": 2858,
+      "prompt_rejected": 2913
+    }
+  ]
+}

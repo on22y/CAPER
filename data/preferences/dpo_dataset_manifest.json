@@ -1,0 +1,32 @@
+{
+  "initial_source_n": 900,
+  "generation_complete_n": 888,
+  "jury_expected": 5328,
+  "jury_raw_rows": {
+    "qwen3": 1776,
+    "granite": 1776,
+    "ministral3": 1776
+  },
+  "jury_valid_keys": {
+    "qwen3": 1776,
+    "granite": 1776,
+    "ministral3": 1776
+  },
+  "aggregation_survivor_n": 501,
+  "survivor_rate": 0.5641891891891891,
+  "domain_counts": {
+    "news": 140,
+    "petition": 172,
+    "sns": 189
+  },
+  "chosen_identity_counts": {
+    "CONSERVATIVE": 45,
+    "TRANSFORMATIVE": 456
+  },
+  "rejection_reason_counts": {
+    "insufficient_stable_votes": 307,
+    "stable_conflict": 80
+  },
+  "aggregation_rule": "accept iff >=2 stable judges support the same actual candidate; original/swapped are not counted as separate votes",
+  "gpt_openai_calls": 0
+}

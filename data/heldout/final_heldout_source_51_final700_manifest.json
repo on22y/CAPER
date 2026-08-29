@@ -1,0 +1,162 @@
+{
+  "output_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo900_mode_jury_v1/data/splits/final_heldout_source_51_final700.jsonl",
+  "output_sha256": "8c66122c61c756a732d24576440dff0b8ec546338d4016769d563bb8623058f1",
+  "selection_seed": 20260829,
+  "eligibility_rule": "Python len(source_text), including whitespace/newlines, must satisfy 200 <= length <= 700; canonical raw eligibility rules unchanged",
+  "selection_rule": "Within each domain, uniformly sample 17 rows with a domain-specific deterministic RNG from eligible candidates sorted by original_sample_id/source_hash.",
+  "selection_uses_model_outputs_or_metrics": false,
+  "reused_candidate_loader": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo900_mode_jury_v1/scripts/create_shortened_heldout51.py",
+  "reused_exclusion_manifest": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo900_mode_jury_v1/data/splits/final_heldout_source_51_shortened_manifest.json",
+  "exclusion_sources": {
+    "dpo_construction_900": {
+      "path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo900_mode_jury_v1/data/splits/dpo_train_source_900.jsonl",
+      "rows": 900,
+      "unique_exact_texts": 900,
+      "unique_normalized_texts": 900
+    },
+    "judge_pilot_28": {
+      "path": "/home/user20250805/gayeon/HCLT2026/work/hcx_v3_direct_expr_jury28_v1/data/jury_input_pairs.jsonl",
+      "rows": 28,
+      "unique_exact_texts": 28,
+      "unique_normalized_texts": 28
+    },
+    "judge_validation_120": {
+      "path": "/home/user20250805/gayeon/HCLT2026/work/hcx_v3_direct_expr_jury120_validation_v1/data/validation_pairs_120.jsonl",
+      "rows": 120,
+      "unique_exact_texts": 120,
+      "unique_normalized_texts": 120
+    },
+    "old_heldout_60": {
+      "path": "/home/user20250805/gayeon/HCLT2026/work/hcx_final_heldout60_v1/data/heldout/final_heldout_source_manifest_60.jsonl",
+      "rows": 60,
+      "unique_exact_texts": 60,
+      "unique_normalized_texts": 60
+    },
+    "current_heldout_51": {
+      "path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo900_mode_jury_v1/data/splits/final_heldout_source_51.jsonl",
+      "rows": 51,
+      "unique_exact_texts": 51,
+      "unique_normalized_texts": 51
+    },
+    "rewrite_prompt_v2_pilot_30": {
+      "path": "/home/user20250805/gayeon/HCLT2026/work/hcx_rewrite_prompt_v2_pilot30/data/pilot_source_manifest_30.jsonl",
+      "rows": 30,
+      "unique_exact_texts": 30,
+      "unique_normalized_texts": 30
+    },
+    "rewrite_prompt_v3_pilot_30": {
+      "path": "/home/user20250805/gayeon/HCLT2026/work/hcx_rewrite_prompt_v3_mode_margin_pilot30_v1/data/pilot_source_manifest_30.jsonl",
+      "rows": 30,
+      "unique_exact_texts": 30,
+      "unique_normalized_texts": 30
+    },
+    "v3_final_method_150": {
+      "path": "/home/user20250805/gayeon/HCLT2026/work/hcx_v3_expansion150_v1/data/final150_source_manifest.jsonl",
+      "rows": 148,
+      "unique_exact_texts": 148,
+      "unique_normalized_texts": 148
+    },
+    "historical_final_registry_1": {
+      "path": "/home/user20250805/gayeon/HCLT2026/work/hcx_pairwise_pilot90_v1/data/pilot_source_manifest_90.jsonl",
+      "rows": 90,
+      "unique_exact_texts": 90,
+      "unique_normalized_texts": 90
+    },
+    "historical_final_registry_2": {
+      "path": "/home/user20250805/gayeon/HCLT2026/work/hcx_pairwise_pilot90_v1/data/nonpilot_source_manifest_210.jsonl",
+      "rows": 210,
+      "unique_exact_texts": 210,
+      "unique_normalized_texts": 210
+    },
+    "historical_final_registry_3": {
+      "path": "/home/user20250805/gayeon/HCLT2026/data/experiment_100/experiment_all_300.jsonl",
+      "rows": 300,
+      "unique_exact_texts": 300,
+      "unique_normalized_texts": 300
+    },
+    "historical_final_registry_4": {
+      "path": "/home/user20250805/gayeon/HCLT2026/work/hcx_pairwise_expand300_v1/data/source/expanded_source_manifest_300.jsonl",
+      "rows": 300,
+      "unique_exact_texts": 300,
+      "unique_normalized_texts": 300
+    },
+    "historical_final_registry_5": {
+      "path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo_pilot186_v1/data/heldout/heldout_source_manifest_60.jsonl",
+      "rows": 60,
+      "unique_exact_texts": 60,
+      "unique_normalized_texts": 60
+    }
+  },
+  "eligible_candidate_pool_counts": {
+    "news": 59930,
+    "petition": 100931,
+    "sns": 7304
+  },
+  "domain_counts": {
+    "news": 17,
+    "petition": 17,
+    "sns": 17
+  },
+  "char_length": {
+    "mean": 403.9019607843137,
+    "median": 343,
+    "min": 223,
+    "max": 690
+  },
+  "overlap_checks": {
+    "dpo_construction_900": {
+      "exact_text_overlap": 0,
+      "normalized_text_overlap": 0
+    },
+    "judge_pilot_28": {
+      "exact_text_overlap": 0,
+      "normalized_text_overlap": 0
+    },
+    "judge_validation_120": {
+      "exact_text_overlap": 0,
+      "normalized_text_overlap": 0
+    },
+    "old_heldout_60": {
+      "exact_text_overlap": 0,
+      "normalized_text_overlap": 0
+    },
+    "current_heldout_51": {
+      "exact_text_overlap": 0,
+      "normalized_text_overlap": 0
+    },
+    "rewrite_prompt_v2_pilot_30": {
+      "exact_text_overlap": 0,
+      "normalized_text_overlap": 0
+    },
+    "rewrite_prompt_v3_pilot_30": {
+      "exact_text_overlap": 0,
+      "normalized_text_overlap": 0
+    },
+    "v3_final_method_150": {
+      "exact_text_overlap": 0,
+      "normalized_text_overlap": 0
+    },
+    "historical_final_registry_1": {
+      "exact_text_overlap": 0,
+      "normalized_text_overlap": 0
+    },
+    "historical_final_registry_2": {
+      "exact_text_overlap": 0,
+      "normalized_text_overlap": 0
+    },
+    "historical_final_registry_3": {
+      "exact_text_overlap": 0,
+      "normalized_text_overlap": 0
+    },
+    "historical_final_registry_4": {
+      "exact_text_overlap": 0,
+      "normalized_text_overlap": 0
+    },
+    "historical_final_registry_5": {
+      "exact_text_overlap": 0,
+      "normalized_text_overlap": 0
+    }
+  },
+  "final_unique_exact_texts": 51,
+  "final_unique_normalized_texts": 51
+}

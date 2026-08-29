@@ -1,0 +1,30 @@
+{
+  "input": "/home/user20250805/gayeon/HCLT2026/work/hcx_base_vs_dpo501_final51_v1/outputs/paired/base_vs_dpo501_rewrites_51.jsonl",
+  "input_rows": 51,
+  "input_sha256": "a2638aec0cbf243bf012261caa7906c86521fa18b9178b1026109813b3f97cee",
+  "prompt": "/home/user20250805/gayeon/HCLT2026/work/hcx_base_vs_dpo501_final51_eval_v1/prompts/gpt4o_substantive_expressive_similarity_system_prompt_v1.txt",
+  "prompt_sha256": "ee4383acad495ee63d42d22bd7a10f2a5b0e216cbafd6aca9d0894522479c542",
+  "gpt_runner": "/home/user20250805/gayeon/HCLT2026/work/hcx_base_vs_dpo501_final51_eval_v1/scripts/run_gpt4o_substantive_similarity.py",
+  "canonical_gpt_runner": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo367_dataset_audit_v1/scripts/run_gpt4o_substantive_similarity.py",
+  "gpt_runner_sha256": "3fc7a61e6e1b59d8e23c44d22d8968d28369e56fd7a6ed9141ff87f4ccd641c9",
+  "canonical_gpt_runner_sha256": "3fc7a61e6e1b59d8e23c44d22d8968d28369e56fd7a6ed9141ff87f4ccd641c9",
+  "gpt_runner_byte_identical": true,
+  "expected_gpt_calls_without_retries": 102,
+  "metrics": [
+    "Entity F1",
+    "Numeric/Date F1",
+    "BiNLI Support",
+    "BiNLI Coverage",
+    "BiNLI F1",
+    "Korean BERTScore Precision",
+    "Korean BERTScore Recall",
+    "Korean BERTScore F1",
+    "chrF++",
+    "Morpheme ROUGE-L",
+    "Extractive Coverage",
+    "Extractive Density",
+    "Novel-2",
+    "Novel-4"
+  ],
+  "qa_based_factuality_excluded": true
+}

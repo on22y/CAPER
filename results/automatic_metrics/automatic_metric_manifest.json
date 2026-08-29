@@ -1,0 +1,55 @@
+{
+  "input": "/home/user20250805/gayeon/HCLT2026/work/hcx_base_vs_dpo501_final51_v1/outputs/paired/base_vs_dpo501_rewrites_51.jsonl",
+  "input_sha256": "a2638aec0cbf243bf012261caa7906c86521fa18b9178b1026109813b3f97cee",
+  "input_pairs": 51,
+  "evaluation_rows": 102,
+  "canonical_final_metric_runner": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo501_final_metrics_v1/scripts/run_final_metrics.py",
+  "metrics": [
+    "Entity F1",
+    "Numeric/Date F1",
+    "BiNLI Support",
+    "BiNLI Coverage",
+    "BiNLI F1",
+    "Korean BERTScore Precision",
+    "Korean BERTScore Recall",
+    "Korean BERTScore F1",
+    "chrF++",
+    "Morpheme ROUGE-L",
+    "Extractive Coverage",
+    "Extractive Density",
+    "Novel-2",
+    "Novel-4"
+  ],
+  "qa_based_factuality_excluded": true,
+  "models": {
+    "entity": "chunwoolee0/klue_ner_roberta_model",
+    "BiNLI": "joeddav/xlm-roberta-large-xnli",
+    "Korean BERTScore": "xlm-roberta-large"
+  },
+  "tokenization": {
+    "morpheme": "PeCab",
+    "chunking": "canonical DPO501 final metric runner unchanged"
+  },
+  "overflow": {
+    "BiNLI Support": {
+      "source": 0,
+      "chosen": 0,
+      "rejected": 0
+    },
+    "BiNLI Coverage": {
+      "source": 0,
+      "chosen": 0,
+      "rejected": 0
+    },
+    "Korean BERTScore": {
+      "source": 0,
+      "chosen": 0,
+      "rejected": 0
+    }
+  },
+  "output_sha256": {
+    "per_sample": "ced8cd1244d562366674fede7ea2a088b09579d3b35b65659655f2414fefd293",
+    "summary": "9b3fb3300d094e4a9ec3aac0b486638e219a9e662fef47fcf47a4c66dc65c6c0",
+    "report": "1c5c3717e5b9994f528e8190612220bd4470ca7196bed8049e02d9cd5e528b77"
+  }
+}

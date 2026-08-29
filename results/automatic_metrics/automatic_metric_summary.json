@@ -1,0 +1,485 @@
+{
+  "input_pairs": 51,
+  "evaluation_rows": 102,
+  "domain_counts": {
+    "news": 17,
+    "petition": 17,
+    "sns": 17
+  },
+  "metrics": [
+    "Entity F1",
+    "Numeric/Date F1",
+    "BiNLI Support",
+    "BiNLI Coverage",
+    "BiNLI F1",
+    "Korean BERTScore Precision",
+    "Korean BERTScore Recall",
+    "Korean BERTScore F1",
+    "chrF++",
+    "Morpheme ROUGE-L",
+    "Extractive Coverage",
+    "Extractive Density",
+    "Novel-2",
+    "Novel-4"
+  ],
+  "validity": {
+    "Entity F1": {
+      "base": 27,
+      "dpo": 27
+    },
+    "Numeric/Date F1": {
+      "base": 36,
+      "dpo": 36
+    },
+    "BiNLI Support": {
+      "base": 51,
+      "dpo": 51
+    },
+    "BiNLI Coverage": {
+      "base": 51,
+      "dpo": 51
+    },
+    "BiNLI F1": {
+      "base": 51,
+      "dpo": 51
+    },
+    "Korean BERTScore Precision": {
+      "base": 51,
+      "dpo": 51
+    },
+    "Korean BERTScore Recall": {
+      "base": 51,
+      "dpo": 51
+    },
+    "Korean BERTScore F1": {
+      "base": 51,
+      "dpo": 51
+    },
+    "chrF++": {
+      "base": 51,
+      "dpo": 51
+    },
+    "Morpheme ROUGE-L": {
+      "base": 51,
+      "dpo": 51
+    },
+    "Extractive Coverage": {
+      "base": 51,
+      "dpo": 51
+    },
+    "Extractive Density": {
+      "base": 51,
+      "dpo": 51
+    },
+    "Novel-2": {
+      "base": 51,
+      "dpo": 51
+    },
+    "Novel-4": {
+      "base": 51,
+      "dpo": 51
+    }
+  },
+  "scopes": {
+    "overall": {
+      "Entity F1": {
+        "valid_n": 27,
+        "base_mean": 0.8590565041365956,
+        "dpo_mean": 0.7808351096316687,
+        "base_minus_dpo_delta": 0.07822139450492689,
+        "wilcoxon_p": 0.05567841349193895
+      },
+      "Numeric/Date F1": {
+        "valid_n": 36,
+        "base_mean": 0.7701468617750131,
+        "dpo_mean": 0.5615131654437975,
+        "base_minus_dpo_delta": 0.20863369633121553,
+        "wilcoxon_p": 0.00021684459942879406
+      },
+      "BiNLI Support": {
+        "valid_n": 51,
+        "base_mean": 0.6428341499740565,
+        "dpo_mean": 0.24906952257211876,
+        "base_minus_dpo_delta": 0.3937646274019379,
+        "wilcoxon_p": 1.0210883866755238e-08
+      },
+      "BiNLI Coverage": {
+        "valid_n": 51,
+        "base_mean": 0.4771065865231487,
+        "dpo_mean": 0.21805834209821123,
+        "base_minus_dpo_delta": 0.2590482444249375,
+        "wilcoxon_p": 1.6193471446954096e-05
+      },
+      "BiNLI F1": {
+        "valid_n": 51,
+        "base_mean": 0.5073489841212185,
+        "dpo_mean": 0.18161792396406962,
+        "base_minus_dpo_delta": 0.32573106015714887,
+        "wilcoxon_p": 4.3972915929239376e-08
+      },
+      "Korean BERTScore Precision": {
+        "valid_n": 51,
+        "base_mean": 0.9888959433518204,
+        "dpo_mean": 0.984443488074284,
+        "base_minus_dpo_delta": 0.00445245527753643,
+        "wilcoxon_p": 8.774256111345653e-10
+      },
+      "Korean BERTScore Recall": {
+        "valid_n": 51,
+        "base_mean": 0.9893057545026144,
+        "dpo_mean": 0.9859360059102377,
+        "base_minus_dpo_delta": 0.003369748592376709,
+        "wilcoxon_p": 7.349853257469353e-10
+      },
+      "Korean BERTScore F1": {
+        "valid_n": 51,
+        "base_mean": 0.9891003086727428,
+        "dpo_mean": 0.9851886893367416,
+        "base_minus_dpo_delta": 0.00391161933600116,
+        "wilcoxon_p": 7.349853257469353e-10
+      },
+      "chrF++": {
+        "valid_n": 51,
+        "base_mean": 0.2665666576321802,
+        "dpo_mean": 0.15689149268840857,
+        "base_minus_dpo_delta": 0.10967516494377161,
+        "wilcoxon_p": 5.145276051717656e-10
+      },
+      "Morpheme ROUGE-L": {
+        "valid_n": 51,
+        "base_mean": 0.4424494348261948,
+        "dpo_mean": 0.2408276834670395,
+        "base_minus_dpo_delta": 0.20162175135915533,
+        "wilcoxon_p": 5.461520578031993e-10
+      },
+      "Extractive Coverage": {
+        "valid_n": 51,
+        "base_mean": 0.6625084854257483,
+        "dpo_mean": 0.5061447752442334,
+        "base_minus_dpo_delta": 0.15636371018151482,
+        "wilcoxon_p": 1.0466620052186515e-09
+      },
+      "Extractive Density": {
+        "valid_n": 51,
+        "base_mean": 2.7442515002296397,
+        "dpo_mean": 1.0479546132033843,
+        "base_minus_dpo_delta": 1.6962968870262551,
+        "wilcoxon_p": 5.796704657296606e-10
+      },
+      "Novel-2": {
+        "valid_n": 51,
+        "base_mean": 0.7013958124969448,
+        "dpo_mean": 0.8676345482256068,
+        "base_minus_dpo_delta": -0.166238735728662,
+        "wilcoxon_p": 5.796704657296606e-10
+      },
+      "Novel-4": {
+        "valid_n": 51,
+        "base_mean": 0.8951022900555424,
+        "dpo_mean": 0.9744250475388687,
+        "base_minus_dpo_delta": -0.07932275748332619,
+        "wilcoxon_p": 2.3968317630262538e-09
+      }
+    },
+    "news": {
+      "Entity F1": {
+        "valid_n": 17,
+        "base_mean": 0.9624230751973383,
+        "dpo_mean": 0.8781050620760678,
+        "base_minus_dpo_delta": 0.08431801312127044,
+        "wilcoxon_p": 0.009888922354075024
+      },
+      "Numeric/Date F1": {
+        "valid_n": 17,
+        "base_mean": 0.8702407487058994,
+        "dpo_mean": 0.7034899471077561,
+        "base_minus_dpo_delta": 0.16675080159814332,
+        "wilcoxon_p": 0.003772239574473987
+      },
+      "BiNLI Support": {
+        "valid_n": 17,
+        "base_mean": 0.9174391635766872,
+        "dpo_mean": 0.5162632954897403,
+        "base_minus_dpo_delta": 0.40117586808694705,
+        "wilcoxon_p": 0.0001068115234375
+      },
+      "BiNLI Coverage": {
+        "valid_n": 17,
+        "base_mean": 0.5971981021459777,
+        "dpo_mean": 0.45510632559786773,
+        "base_minus_dpo_delta": 0.14209177654810992,
+        "wilcoxon_p": 0.056884765625
+      },
+      "BiNLI F1": {
+        "valid_n": 17,
+        "base_mean": 0.6785739009837766,
+        "dpo_mean": 0.38732328802741595,
+        "base_minus_dpo_delta": 0.2912506129563606,
+        "wilcoxon_p": 0.0008392333984375
+      },
+      "Korean BERTScore Precision": {
+        "valid_n": 17,
+        "base_mean": 0.9918620656518375,
+        "dpo_mean": 0.9882685962845298,
+        "base_minus_dpo_delta": 0.003593469367307775,
+        "wilcoxon_p": 1.52587890625e-05
+      },
+      "Korean BERTScore Recall": {
+        "valid_n": 17,
+        "base_mean": 0.9915881682844723,
+        "dpo_mean": 0.9890743003172033,
+        "base_minus_dpo_delta": 0.002513867967269,
+        "wilcoxon_p": 1.52587890625e-05
+      },
+      "Korean BERTScore F1": {
+        "valid_n": 17,
+        "base_mean": 0.9917247397363141,
+        "dpo_mean": 0.9886708441598858,
+        "base_minus_dpo_delta": 0.00305389557642844,
+        "wilcoxon_p": 1.52587890625e-05
+      },
+      "chrF++": {
+        "valid_n": 17,
+        "base_mean": 0.36025143846518126,
+        "dpo_mean": 0.22371062039743836,
+        "base_minus_dpo_delta": 0.13654081806774293,
+        "wilcoxon_p": 1.52587890625e-05
+      },
+      "Morpheme ROUGE-L": {
+        "valid_n": 17,
+        "base_mean": 0.5404353016583547,
+        "dpo_mean": 0.34506222375836326,
+        "base_minus_dpo_delta": 0.19537307789999148,
+        "wilcoxon_p": 1.52587890625e-05
+      },
+      "Extractive Coverage": {
+        "valid_n": 17,
+        "base_mean": 0.7620219279767437,
+        "dpo_mean": 0.6331240550899258,
+        "base_minus_dpo_delta": 0.12889787288681792,
+        "wilcoxon_p": 3.0517578125e-05
+      },
+      "Extractive Density": {
+        "valid_n": 17,
+        "base_mean": 3.892329549215295,
+        "dpo_mean": 1.8163527025668795,
+        "base_minus_dpo_delta": 2.0759768466484156,
+        "wilcoxon_p": 1.52587890625e-05
+      },
+      "Novel-2": {
+        "valid_n": 17,
+        "base_mean": 0.5821745256989697,
+        "dpo_mean": 0.7611069294695366,
+        "base_minus_dpo_delta": -0.178932403770567,
+        "wilcoxon_p": 1.52587890625e-05
+      },
+      "Novel-4": {
+        "valid_n": 17,
+        "base_mean": 0.8146054876309448,
+        "dpo_mean": 0.9371771898593754,
+        "base_minus_dpo_delta": -0.12257170222843067,
+        "wilcoxon_p": 1.52587890625e-05
+      }
+    },
+    "petition": {
+      "Entity F1": {
+        "valid_n": 9,
+        "base_mean": 0.6481481481481481,
+        "dpo_mean": 0.5727513227513228,
+        "base_minus_dpo_delta": 0.0753968253968254,
+        "wilcoxon_p": 0.8125
+      },
+      "Numeric/Date F1": {
+        "valid_n": 12,
+        "base_mean": 0.6609328579916814,
+        "dpo_mean": 0.4776112776112776,
+        "base_minus_dpo_delta": 0.1833215803804039,
+        "wilcoxon_p": 0.03125
+      },
+      "BiNLI Support": {
+        "valid_n": 17,
+        "base_mean": 0.5937820112583917,
+        "dpo_mean": 0.18484745890078594,
+        "base_minus_dpo_delta": 0.4089345523576058,
+        "wilcoxon_p": 0.0013427734375
+      },
+      "BiNLI Coverage": {
+        "valid_n": 17,
+        "base_mean": 0.4554856063463235,
+        "dpo_mean": 0.14191960313284568,
+        "base_minus_dpo_delta": 0.31356600321347783,
+        "wilcoxon_p": 0.007904052734375
+      },
+      "BiNLI F1": {
+        "valid_n": 17,
+        "base_mean": 0.4853873517689257,
+        "dpo_mean": 0.13558736045252673,
+        "base_minus_dpo_delta": 0.349799991316399,
+        "wilcoxon_p": 0.001678466796875
+      },
+      "Korean BERTScore Precision": {
+        "valid_n": 17,
+        "base_mean": 0.9869345356436336,
+        "dpo_mean": 0.9824621011229122,
+        "base_minus_dpo_delta": 0.0044724345207214355,
+        "wilcoxon_p": 0.0001068115234375
+      },
+      "Korean BERTScore Recall": {
+        "valid_n": 17,
+        "base_mean": 0.9877251667134902,
+        "dpo_mean": 0.9842479334158056,
+        "base_minus_dpo_delta": 0.0034772332976846132,
+        "wilcoxon_p": 7.62939453125e-05
+      },
+      "Korean BERTScore F1": {
+        "valid_n": 17,
+        "base_mean": 0.9873291596733269,
+        "dpo_mean": 0.983353823524313,
+        "base_minus_dpo_delta": 0.003975336149013771,
+        "wilcoxon_p": 7.62939453125e-05
+      },
+      "chrF++": {
+        "valid_n": 17,
+        "base_mean": 0.2268457709017633,
+        "dpo_mean": 0.1333780742039146,
+        "base_minus_dpo_delta": 0.09346769669784871,
+        "wilcoxon_p": 1.52587890625e-05
+      },
+      "Morpheme ROUGE-L": {
+        "valid_n": 17,
+        "base_mean": 0.3907223736861277,
+        "dpo_mean": 0.19146051711096146,
+        "base_minus_dpo_delta": 0.19926185657516626,
+        "wilcoxon_p": 3.0517578125e-05
+      },
+      "Extractive Coverage": {
+        "valid_n": 17,
+        "base_mean": 0.6052275516297234,
+        "dpo_mean": 0.4469139262019296,
+        "base_minus_dpo_delta": 0.15831362542779379,
+        "wilcoxon_p": 0.000152587890625
+      },
+      "Extractive Density": {
+        "valid_n": 17,
+        "base_mean": 2.8818491975622655,
+        "dpo_mean": 0.7162488194008859,
+        "base_minus_dpo_delta": 2.16560037816138,
+        "wilcoxon_p": 3.0517578125e-05
+      },
+      "Novel-2": {
+        "valid_n": 17,
+        "base_mean": 0.7579012632699035,
+        "dpo_mean": 0.9099480033371968,
+        "base_minus_dpo_delta": -0.15204674006729335,
+        "wilcoxon_p": 4.57763671875e-05
+      },
+      "Novel-4": {
+        "valid_n": 17,
+        "base_mean": 0.9186944401546241,
+        "dpo_mean": 0.9899021122445644,
+        "base_minus_dpo_delta": -0.07120767208994033,
+        "wilcoxon_p": 0.0006549583433856954
+      }
+    },
+    "sns": {
+      "Entity F1": {
+        "valid_n": 1,
+        "base_mean": 1.0,
+        "dpo_mean": 1.0,
+        "base_minus_dpo_delta": 0.0,
+        "wilcoxon_p": null
+      },
+      "Numeric/Date F1": {
+        "valid_n": 7,
+        "base_mean": 0.7142857142857143,
+        "dpo_mean": 0.36054421768707484,
+        "base_minus_dpo_delta": 0.35374149659863946,
+        "wilcoxon_p": 0.1875
+      },
+      "BiNLI Support": {
+        "valid_n": 17,
+        "base_mean": 0.41728127508709095,
+        "dpo_mean": 0.04609781332583013,
+        "base_minus_dpo_delta": 0.3711834617612608,
+        "wilcoxon_p": 1.52587890625e-05
+      },
+      "BiNLI Coverage": {
+        "valid_n": 17,
+        "base_mean": 0.378636051077145,
+        "dpo_mean": 0.05714909756392028,
+        "base_minus_dpo_delta": 0.3214869535132247,
+        "wilcoxon_p": 0.0020904541015625
+      },
+      "BiNLI F1": {
+        "valid_n": 17,
+        "base_mean": 0.35808569961095327,
+        "dpo_mean": 0.021943123412266202,
+        "base_minus_dpo_delta": 0.3361425761986871,
+        "wilcoxon_p": 1.52587890625e-05
+      },
+      "Korean BERTScore Precision": {
+        "valid_n": 17,
+        "base_mean": 0.98789122875999,
+        "dpo_mean": 0.98259976681541,
+        "base_minus_dpo_delta": 0.005291461944580078,
+        "wilcoxon_p": 1.52587890625e-05
+      },
+      "Korean BERTScore Recall": {
+        "valid_n": 17,
+        "base_mean": 0.9886039285098805,
+        "dpo_mean": 0.984485783997704,
+        "base_minus_dpo_delta": 0.004118144512176514,
+        "wilcoxon_p": 1.52587890625e-05
+      },
+      "Korean BERTScore F1": {
+        "valid_n": 17,
+        "base_mean": 0.9882470266085877,
+        "dpo_mean": 0.9835414003260263,
+        "base_minus_dpo_delta": 0.004705626282561267,
+        "wilcoxon_p": 1.52587890625e-05
+      },
+      "chrF++": {
+        "valid_n": 17,
+        "base_mean": 0.21260276352959598,
+        "dpo_mean": 0.11358578346387278,
+        "base_minus_dpo_delta": 0.0990169800657232,
+        "wilcoxon_p": 1.52587890625e-05
+      },
+      "Morpheme ROUGE-L": {
+        "valid_n": 17,
+        "base_mean": 0.3961906291341019,
+        "dpo_mean": 0.1859603095317937,
+        "base_minus_dpo_delta": 0.2102303196023082,
+        "wilcoxon_p": 1.52587890625e-05
+      },
+      "Extractive Coverage": {
+        "valid_n": 17,
+        "base_mean": 0.6202759766707777,
+        "dpo_mean": 0.43839634444084485,
+        "base_minus_dpo_delta": 0.18187963222993284,
+        "wilcoxon_p": 1.52587890625e-05
+      },
+      "Extractive Density": {
+        "valid_n": 17,
+        "base_mean": 1.458575753911358,
+        "dpo_mean": 0.6112623176423878,
+        "base_minus_dpo_delta": 0.84731343626897,
+        "wilcoxon_p": 1.52587890625e-05
+      },
+      "Novel-2": {
+        "valid_n": 17,
+        "base_mean": 0.7641116485219615,
+        "dpo_mean": 0.931848711870087,
+        "base_minus_dpo_delta": -0.1677370633481256,
+        "wilcoxon_p": 1.52587890625e-05
+      },
+      "Novel-4": {
+        "valid_n": 17,
+        "base_mean": 0.9520069423810585,
+        "dpo_mean": 0.9961958405126663,
+        "base_minus_dpo_delta": -0.044188898131607604,
+        "wilcoxon_p": 0.0006549583433856954
+      }
+    }
+  }
+}

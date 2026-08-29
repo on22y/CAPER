@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*.log
+logs/
+tmp/
+.cache/
+checkpoints/
+*.safetensors
+*.bin
+*.pt
+*.pth
+.env

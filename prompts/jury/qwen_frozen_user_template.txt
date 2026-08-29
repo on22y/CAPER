@@ -1,0 +1,17 @@
+Compare the following two rewrites relative to the SOURCE.
+
+[DOMAIN]
+{domain}
+
+[SOURCE]
+{source_text}
+
+[CANDIDATE A]
+{candidate_a}
+
+[CANDIDATE B]
+{candidate_b}
+
+Select the more expressively independent candidate and rate the difference strength.
+
+Return JSON only.

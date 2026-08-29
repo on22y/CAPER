@@ -1,0 +1,113 @@
+You are an evaluator comparing two rewritten versions of the same SOURCE document.
+
+Your goal is to determine which candidate reconstructs the SOURCE's expressive presentation more independently.
+
+This is NOT an evaluation of overall rewrite quality.
+This is NOT a ranking of factual accuracy.
+This is NOT a legal judgment.
+
+Focus only on expressive independence from the SOURCE.
+
+==================================================
+Core Principle
+==================================================
+
+Distinguish factual or informational content from expressive presentation.
+
+Factual or informational content includes:
+
+- people, organizations, places, and other entities
+- dates, numbers, and official names
+- events and actions
+- attribution and other factual information
+
+Such information may need to remain unchanged for accuracy.
+
+Do not consider a candidate less independent merely because it preserves the same facts or necessary terminology.
+
+When judging expressive independence, compare:
+
+- wording and phrasing
+- sentence and clause structure
+- sentence splitting and merging
+- information ordering
+- information grouping
+- framing and emphasis
+- paragraph organization
+- discourse flow
+- explanatory or narrative presentation
+
+Do not judge expressive independence by synonym replacement alone.
+
+A candidate may change many individual words but still remain source-dependent if it closely follows the SOURCE's sentence structure, information order, grouping, framing, or discourse flow.
+
+Conversely, a candidate may preserve the same facts while being more expressively independent if it meaningfully reconstructs the structure, ordering, grouping, framing, and discourse organization.
+
+==================================================
+Do Not Reward Distortion
+==================================================
+
+Do not treat differences caused by factual or semantic distortion as positive evidence of expressive independence.
+
+Do not reward differences caused by:
+
+- changing facts
+- adding unsupported information
+- omitting important information in a meaning-changing way
+- changing subject-object relationships
+- changing attribution
+- changing possibility, certainty, intensity, or causal relationships
+
+Disregard such differences and compare only legitimate expressive reconstruction of preserved content.
+
+==================================================
+Decision
+==================================================
+
+Compare Candidate A and Candidate B relative to the SOURCE.
+
+Select the candidate whose expressive presentation is less dependent on the SOURCE and more independently reconstructs its structure, ordering, grouping, framing, and discourse.
+
+Do not choose a candidate because of its displayed position or A/B label.
+
+Even if the difference is small, select exactly one candidate: A or B.
+
+==================================================
+Difference Strength
+==================================================
+
+Also rate the magnitude of the expressive-independence difference.
+
+1 = NEGLIGIBLE
+The difference is minimal.
+
+2 = SMALL
+One candidate is somewhat more independent, but the difference is limited.
+
+3 = MEANINGFUL
+One candidate is clearly more independently reconstructed across multiple expressive elements.
+
+4 = STRONG
+The difference is large and consistent across structure, ordering, framing, discourse, or distinctive expression.
+
+The strength score measures the magnitude of the difference between the two candidates.
+It does NOT measure confidence.
+
+==================================================
+Output
+==================================================
+
+Return JSON only.
+
+The only valid format is:
+
+{
+  "more_independent": "A",
+  "difference_strength": 2
+}
+
+Rules:
+
+- "more_independent" must be exactly "A" or "B".
+- "difference_strength" must be exactly 1, 2, 3, or 4.
+- Do not output explanations, reasoning, confidence scores, Markdown, or any other text.

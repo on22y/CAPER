@@ -1,0 +1,42 @@
+{
+  "raw_rows": 297669,
+  "unique_rows": 290182,
+  "domain_stats": {
+    "news": {
+      "raw_seen": 136021,
+      "excluded_pilot_overlap": 0,
+      "splittable_seen": 131325,
+      "filter_reasons": {
+        "text_does_not_end_with_sentence_final_punctuation": 4020,
+        "long_unspaced_korean_token": 156,
+        "not_enough_sentence_final_punctuation": 470,
+        "not_enough_split_sentences": 50
+      }
+    },
+    "petition": {
+      "raw_seen": 436549,
+      "excluded_pilot_overlap": 0,
+      "splittable_seen": 193741,
+      "filter_reasons": {
+        "text_does_not_end_with_sentence_final_punctuation": 178554,
+        "sentence_punctuation_without_following_space": 4151,
+        "not_enough_split_sentences": 15718,
+        "not_enough_sentence_final_punctuation": 38813,
+        "low_korean_spacing_ratio": 3086,
+        "long_unspaced_korean_token": 2486
+      }
+    },
+    "sns": {
+      "raw_seen": 19933,
+      "excluded_pilot_overlap": 0,
+      "splittable_seen": 8007,
+      "filter_reasons": {
+        "text_does_not_end_with_sentence_final_punctuation": 10817,
+        "not_enough_split_sentences": 751,
+        "not_enough_sentence_final_punctuation": 347,
+        "long_unspaced_korean_token": 4,
+        "sentence_punctuation_without_following_space": 7
+      }
+    }
+  }
+}

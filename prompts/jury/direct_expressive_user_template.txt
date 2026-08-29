@@ -1,0 +1,17 @@
+Compare the SOURCE and the two rewritten candidates below.
+
+[DOMAIN]
+{domain}
+
+[SOURCE]
+{source_text}
+
+[CANDIDATE A]
+{candidate_a}
+
+[CANDIDATE B]
+{candidate_b}
+
+Select the candidate that reconstructs the SOURCE's expressive presentation more independently.
+
+Output only A or B.

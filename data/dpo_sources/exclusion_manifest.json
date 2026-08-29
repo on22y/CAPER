@@ -1,0 +1,44 @@
+{
+  "seed": 20260828,
+  "excluded_paths": {
+    "dev28": "/home/user20250805/gayeon/HCLT2026/work/hcx_v3_direct_expr_jury28_v1/data/jury_input_pairs.jsonl",
+    "validation120": "/home/user20250805/gayeon/HCLT2026/work/hcx_v3_direct_expr_jury120_validation_v1/data/validation_pairs_120.jsonl",
+    "oldheldout60": "/home/user20250805/gayeon/HCLT2026/work/hcx_final_heldout60_v1/data/heldout/final_heldout_source_manifest_60.jsonl"
+  },
+  "excluded_rows": {
+    "dev28": 28,
+    "validation120": 120,
+    "oldheldout60": 60
+  },
+  "checks": {
+    "train_heldout_hash_overlap": 0,
+    "train_dev28_hash_overlap": 0,
+    "train_validation120_hash_overlap": 0,
+    "train_oldheldout60_hash_overlap": 0,
+    "heldout_dev28_hash_overlap": 0,
+    "heldout_validation120_hash_overlap": 0,
+    "heldout_oldheldout60_hash_overlap": 0
+  },
+  "raw_unique_domain_counts": {
+    "news": 130880,
+    "petition": 151295,
+    "sns": 8007
+  },
+  "eligible_domain_counts": {
+    "news": 130811,
+    "petition": 151226,
+    "sns": 7937
+  },
+  "train_domain_counts": {
+    "news": 300,
+    "petition": 300,
+    "sns": 300
+  },
+  "heldout_domain_counts": {
+    "news": 17,
+    "petition": 17,
+    "sns": 17
+  },
+  "train_sha256": "885f236bb6caad487188704a172031e992e327e0f7e5caba575635ae6b34707c",
+  "heldout_sha256": "cd527722333a39d3d765ae5e75ab3df863e8f7d84e3b99aa2323d6e7f1981480"
+}

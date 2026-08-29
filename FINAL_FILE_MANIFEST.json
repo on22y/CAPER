@@ -1,0 +1,804 @@
+{
+  "repository": {
+    "source_root": "/home/user20250805/gayeon/HCLT2026",
+    "destination_root": "/home/user20250805/gayeon/HCLT_2026",
+    "copy_policy": "copy_only; source files unchanged; role-oriented destination paths",
+    "manifest_self_sha256_excluded": true,
+    "file_count_excluding_manifest": 97,
+    "role_counts": {
+      "code": 34,
+      "config": 6,
+      "data": 20,
+      "documentation": 1,
+      "prompt": 8,
+      "result": 28
+    },
+    "stage_counts": {
+      "automatic_evaluation": 5,
+      "automatic_evaluation_helper": 7,
+      "ct_generation": 6,
+      "ct_generation_helper": 1,
+      "ct_pairing": 1,
+      "dpo_preprocessing": 3,
+      "dpo_training": 9,
+      "final_evaluation": 2,
+      "final_generation": 10,
+      "gpt4o_evaluation": 14,
+      "granite_jury": 3,
+      "heldout_selection": 3,
+      "heldout_selection_helper": 1,
+      "jury_assignment": 1,
+      "jury_helper": 4,
+      "local_jury": 2,
+      "matched_recovery": 2,
+      "ministral_jury": 3,
+      "order_stability": 1,
+      "preference_construction": 6,
+      "qwen_jury": 4,
+      "raw_source_preparation": 2,
+      "repository_documentation": 1,
+      "repository_hygiene": 1,
+      "source_construction": 4,
+      "vote_aggregation": 1
+    }
+  },
+  "metadata": {
+    "excluded_categories": [
+      "old 367-preference experiment",
+      "all 28/30/90/120/148/150 pilot and judge-development artifacts",
+      "old held-out 60 and previous held-out 51 variants",
+      "rewrite-prompt v2/v3 pilot outputs unrelated to the final 900 run",
+      "failed DPO train v1/v2 runs and training logs",
+      "pre-recovery 50/51 and failed single-side recovery artifacts",
+      "benchmarks and human annotations not part of the final run",
+      "checkpoints, adapter weights, model weights, optimizer states, tokenizer/model caches",
+      "logs, tmp, __pycache__, .git, large raw datasets",
+      "duplicate jury aliases under outputs/raw and duplicate CSV preference export",
+      "QA-based factuality, which was blocked/excluded from final held-out evaluation"
+    ],
+    "unresolved_references": [
+      {
+        "reference": "/home/user20250805/gayeon/HCLT2026",
+        "reason": "Copied scripts retain original absolute PROJECT/ROOT paths by request and were not rewritten."
+      },
+      {
+        "reference": "/home/user20250805/gayeon/HCLT2026/data/raw",
+        "reason": "The large raw source corpus was intentionally excluded."
+      },
+      {
+        "reference": "work/hcx_dpo900_mode_jury_v1/data/splits/final_heldout_source_51_shortened_manifest.json",
+        "reason": "The final700 selector reused this prior exclusion registry; the prior held-out artifact itself was excluded, while the final700 manifest preserves exclusion provenance and checks."
+      },
+      {
+        "reference": "pilot/validation/old-heldout files named in source-selection scripts",
+        "reason": "These are exclusion-only references and were omitted intentionally; their provenance/check outcomes are recorded in final manifests."
+      },
+      {
+        "reference": "/home/user20250805/gayeon/.env",
+        "reason": "GPT-4o API credentials are external and secret."
+      },
+      {
+        "reference": "Original experiment-root script paths used by dynamic imports",
+        "reason": "The exact helper files are included under src/, but copied code remains byte-identical and therefore still points to original absolute locations."
+      }
+    ],
+    "external_model_paths": [
+      {
+        "model": "naver-hyperclovax/HyperCLOVAX-SEED-Think-14B",
+        "path": "/home/user20250805/gayeon/HCLT2026/models/HyperCLOVAX-SEED-Think-14B",
+        "included": false
+      },
+      {
+        "model": "DPO501 final LoRA adapter",
+        "path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo501_train_v3/checkpoints/final_adapter",
+        "included": false
+      },
+      {
+        "model": "Qwen/Qwen3-8B",
+        "path": "/home/user20250805/.cache/huggingface/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218",
+        "included": false
+      },
+      {
+        "model": "ibm-granite/granite-3.3-8b-instruct",
+        "path": "/home/user20250805/gayeon/HCLT2026/models/judges/granite-3.3-8b-instruct",
+        "included": false
+      },
+      {
+        "model": "mistralai/Ministral-3-8B-Instruct-2512",
+        "path": "/home/user20250805/.cache/huggingface/hub/models--mistralai--Ministral-3-8B-Instruct-2512/snapshots/5b26027e7b19eeb4b7352e1fed3926375dd2cb4d",
+        "included": false
+      },
+      {
+        "model": "Automatic metric models",
+        "path": "See results/automatic_metrics/automatic_metric_manifest.json",
+        "included": false
+      },
+      {
+        "model": "gpt-4o",
+        "path": "OpenAI API",
+        "included": false
+      }
+    ]
+  },
+  "files": [
+    {
+      "destination_path": ".gitignore",
+      "original_source_path": null,
+      "role": "config",
+      "pipeline_stage": "repository_hygiene",
+      "sha256": "9d003def7729ffaa634090eb8b5f9c3e92673e55da7b55799518b82e170dacef"
+    },
+    {
+      "destination_path": "README.md",
+      "original_source_path": null,
+      "role": "documentation",
+      "pipeline_stage": "repository_documentation",
+      "sha256": "7ca4781aa5e74c340280cdf1aa26710934f9c6ce9b981af441bab30a5509e2e2"
+    },
+    {
+      "destination_path": "configs/evaluator_models.json",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_pairwise_expand300_v1/configs/evaluator_models.json",
+      "role": "config",
+      "pipeline_stage": "local_jury",
+      "sha256": "3b1e936f881fce64efca055fe693403b8f543bf6c056f0d38fbceefd3f3a8620"
+    },
+    {
+      "destination_path": "configs/final_adapter_config.json",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo501_train_v3/checkpoints/final_adapter/adapter_config.json",
+      "role": "config",
+      "pipeline_stage": "dpo_training",
+      "sha256": "b420f4e17a499b3e8aaa197b383f074e73011a0dea9ae98df7b04678456308e7"
+    },
+    {
+      "destination_path": "configs/hcx_generation_config.json",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_pairwise_expand300_v1/configs/hcx_generation_config.json",
+      "role": "config",
+      "pipeline_stage": "ct_generation",
+      "sha256": "d7a5e5274ea5d2efb06f01cdf20632423eb175e56c9634c349d8c8d96d4fe4e1"
+    },
+    {
+      "destination_path": "configs/heldout_generation_config.json",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_base_vs_dpo501_final51_v1/configs/heldout_generation_config.json",
+      "role": "config",
+      "pipeline_stage": "final_generation",
+      "sha256": "056d2160b70c3bc734452487129043515e1872299215f33c9b0887f6ecb89470"
+    },
+    {
+      "destination_path": "configs/lora_dpo501_config.json",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo501_train_v3/configs/lora_dpo501_config.json",
+      "role": "config",
+      "pipeline_stage": "dpo_training",
+      "sha256": "4f99684ab4cf72bbc78525854fe814366919010be48a207e325db032dfa08670"
+    },
+    {
+      "destination_path": "data/ct_rewrites/complete_ct_pairs_888.jsonl",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo900_mode_jury_v1/outputs/generation/complete_ct_pairs.jsonl",
+      "role": "data",
+      "pipeline_stage": "ct_pairing",
+      "sha256": "2bc3de41c8aaabb2f3dd5634890ee1681cbd31e62f939a8aeccc260fb78a0c30"
+    },
+    {
+      "destination_path": "data/ct_rewrites/conservative_900.jsonl",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo900_mode_jury_v1/outputs/generation/conservative.jsonl",
+      "role": "data",
+      "pipeline_stage": "ct_generation",
+      "sha256": "ff5e65c8e0a29c1b6291616613f40119e9cbb04f5ac32db78a9bcd73e3016c77"
+    },
+    {
+      "destination_path": "data/ct_rewrites/raw_generation_attempts_and_failures.jsonl",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo900_mode_jury_v1/outputs/generation/raw_attempts.jsonl",
+      "role": "data",
+      "pipeline_stage": "ct_generation",
+      "sha256": "59c3fd50c00a838a93eedee461c7ee30c009e8bdbc1b30b16a13461afb60fc5c"
+    },
+    {
+      "destination_path": "data/ct_rewrites/transformative_900.jsonl",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo900_mode_jury_v1/outputs/generation/transformative.jsonl",
+      "role": "data",
+      "pipeline_stage": "ct_generation",
+      "sha256": "d44e4e8eaf709454eacf9dc27c414b7f75e66a1236c1f8dbd47d79d4d21ec489"
+    },
+    {
+      "destination_path": "data/dpo_sources/dpo_train_source_900.jsonl",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo900_mode_jury_v1/data/splits/dpo_train_source_900.jsonl",
+      "role": "data",
+      "pipeline_stage": "source_construction",
+      "sha256": "885f236bb6caad487188704a172031e992e327e0f7e5caba575635ae6b34707c"
+    },
+    {
+      "destination_path": "data/dpo_sources/dpo_train_source_900.sha256",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo900_mode_jury_v1/data/splits/dpo_train_source_900.sha256",
+      "role": "data",
+      "pipeline_stage": "source_construction",
+      "sha256": "cab4a41f227195a706b3b67853055fa66b5966768abbc0e42ca8e7383b4f1811"
+    },
+    {
+      "destination_path": "data/dpo_sources/exclusion_manifest.json",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo900_mode_jury_v1/data/splits/exclusion_manifest.json",
+      "role": "data",
+      "pipeline_stage": "source_construction",
+      "sha256": "b21c5f830cc2de6a7ab693bbe292928633e04b625ad04f334fa8df6d7594c5f8"
+    },
+    {
+      "destination_path": "data/dpo_sources/raw_load_stats.json",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo900_mode_jury_v1/data/splits/raw_load_stats.json",
+      "role": "data",
+      "pipeline_stage": "source_construction",
+      "sha256": "3e9ac0e8e7b39ba65119cc195145b4314a8553e7909563558facbb098e1d8505"
+    },
+    {
+      "destination_path": "data/heldout/final_heldout_source_51_final700.jsonl",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo900_mode_jury_v1/data/splits/final_heldout_source_51_final700.jsonl",
+      "role": "data",
+      "pipeline_stage": "heldout_selection",
+      "sha256": "8c66122c61c756a732d24576440dff0b8ec546338d4016769d563bb8623058f1"
+    },
+    {
+      "destination_path": "data/heldout/final_heldout_source_51_final700_manifest.json",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo900_mode_jury_v1/data/splits/final_heldout_source_51_final700_manifest.json",
+      "role": "data",
+      "pipeline_stage": "heldout_selection",
+      "sha256": "a8d8f34a589fe27a9558d5f4dee52e1a58280199874db9cba69e1b1b9db8d635"
+    },
+    {
+      "destination_path": "data/jury/aggregation_results_888.jsonl",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo900_mode_jury_v1/outputs/jury/aggregation/aggregation_results.jsonl",
+      "role": "data",
+      "pipeline_stage": "vote_aggregation",
+      "sha256": "41aec36c511c53206e9bb2868e8ea61222cd10651e2982940b89f5dba66072ab"
+    },
+    {
+      "destination_path": "data/jury/candidate_assignment_888.jsonl",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo900_mode_jury_v1/data/jury/candidate_assignment.jsonl",
+      "role": "data",
+      "pipeline_stage": "jury_assignment",
+      "sha256": "2b6d4ad7a59b05c9f6f1a025e8df94a777d504d6efcb35a87026a6585db840a6"
+    },
+    {
+      "destination_path": "data/jury/granite_original_swapped.jsonl",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo900_mode_jury_v1/outputs/jury/raw/granite.jsonl",
+      "role": "data",
+      "pipeline_stage": "granite_jury",
+      "sha256": "a9c115383e8eee6977a25a2de4b93b9100b3a9824f60eaf972f4b3edc8240bf8"
+    },
+    {
+      "destination_path": "data/jury/ministral3_original_swapped.jsonl",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo900_mode_jury_v1/outputs/jury/raw/ministral3.jsonl",
+      "role": "data",
+      "pipeline_stage": "ministral_jury",
+      "sha256": "bc080884df8e5b55778c0b6ff307ff1ab8cca2c947f358cde044762fe7ecb539"
+    },
+    {
+      "destination_path": "data/jury/qwen3_original_swapped.jsonl",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo900_mode_jury_v1/outputs/jury/raw/qwen3.jsonl",
+      "role": "data",
+      "pipeline_stage": "qwen_jury",
+      "sha256": "fdde3e0c81ce56412de9c7d926f7321c65d4354aece6bcd9f79f29c9aa808564"
+    },
+    {
+      "destination_path": "data/jury/stable_vote_results_888.jsonl",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo900_mode_jury_v1/outputs/jury/aggregation/stable_vote_results.jsonl",
+      "role": "data",
+      "pipeline_stage": "order_stability",
+      "sha256": "a5a2acb16321d0521ff0d80cea55d9a51b886ef352f46541320a0089571aea73"
+    },
+    {
+      "destination_path": "data/preferences/dpo_dataset_manifest.json",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo900_mode_jury_v1/outputs/preferences/dpo_dataset_manifest.json",
+      "role": "data",
+      "pipeline_stage": "preference_construction",
+      "sha256": "870602bfe18d3582abf747138b0e0e25a5839925562a36411f9338ddcc0c57d2"
+    },
+    {
+      "destination_path": "data/preferences/dpo_preferences_all_survivors_501.jsonl",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo900_mode_jury_v1/outputs/preferences/dpo_preferences_all_survivors.jsonl",
+      "role": "data",
+      "pipeline_stage": "preference_construction",
+      "sha256": "01ccd62178f439632309ec77dbc87a05655fa010946522bf140f143d1a0db0c0"
+    },
+    {
+      "destination_path": "data/preferences/dpo_train_501_chatformatted.jsonl",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo501_train_v3/data/dpo/dpo_train_501_chatformatted.jsonl",
+      "role": "data",
+      "pipeline_stage": "dpo_preprocessing",
+      "sha256": "92f26cb63bfec13e0942caf969a11debdc1c2df8f163385f91643fd2f7c85cba"
+    },
+    {
+      "destination_path": "data/preferences/token_length_preflight.json",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo501_train_v3/data/dpo/token_length_preflight.json",
+      "role": "data",
+      "pipeline_stage": "dpo_preprocessing",
+      "sha256": "179d9c10240a4c9293192b249a33b449a5e3bcafa7cf0958b55c38c532e2964c"
+    },
+    {
+      "destination_path": "prompts/evaluation/gpt4o_substantive_expressive_similarity_system_prompt_v1.txt",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_base_vs_dpo501_final51_eval_v1/prompts/gpt4o_substantive_expressive_similarity_system_prompt_v1.txt",
+      "role": "prompt",
+      "pipeline_stage": "gpt4o_evaluation",
+      "sha256": "ee4383acad495ee63d42d22bd7a10f2a5b0e216cbafd6aca9d0894522479c542"
+    },
+    {
+      "destination_path": "prompts/jury/direct_expressive_user_template.txt",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo900_mode_jury_v1/prompts/direct_expressive_user_template.txt",
+      "role": "prompt",
+      "pipeline_stage": "local_jury",
+      "sha256": "b486b98d4cc1a562e46760b00557a4aea07f039310d71c170ba8fecc4e54c510"
+    },
+    {
+      "destination_path": "prompts/jury/granite_frozen_system_prompt.txt",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo900_mode_jury_v1/prompts/granite_frozen_prompt_reference.txt",
+      "role": "prompt",
+      "pipeline_stage": "granite_jury",
+      "sha256": "904a8db88c8210a59bb009de2c5492f9f7d44ac26f3911fcb2084190e8f7cfd3"
+    },
+    {
+      "destination_path": "prompts/jury/ministral_frozen_system_prompt.txt",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo900_mode_jury_v1/prompts/ministral_frozen_prompt_reference.txt",
+      "role": "prompt",
+      "pipeline_stage": "ministral_jury",
+      "sha256": "4ab52ff34c496f23adaf6e6b524a48b748eb2bd7ecab06327d81c699fb31f25a"
+    },
+    {
+      "destination_path": "prompts/jury/qwen_frozen_system_prompt.txt",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo900_mode_jury_v1/prompts/qwen_frozen_prompt_reference.txt",
+      "role": "prompt",
+      "pipeline_stage": "qwen_jury",
+      "sha256": "a033f195adec429806f57e8b69a27bf343677b817bacc1850b6ba405aef09723"
+    },
+    {
+      "destination_path": "prompts/jury/qwen_frozen_user_template.txt",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo900_mode_jury_v1/prompts/qwen_frozen_user_template.txt",
+      "role": "prompt",
+      "pipeline_stage": "qwen_jury",
+      "sha256": "4df6d32444af8e15d645b270b050de622e74b1e2937f644368fa47a48910b598"
+    },
+    {
+      "destination_path": "prompts/rewrite/document_rewrite_instruction_v1.txt",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_base_vs_expanded_dpo_final60_v1/prompts/document_rewrite_instruction_v1.txt",
+      "role": "prompt",
+      "pipeline_stage": "final_generation",
+      "sha256": "ff5528cc65e6f378e2f05c6fe4c05c7d7367509c731fe0e31c35721ccd63a798"
+    },
+    {
+      "destination_path": "prompts/rewrite/document_rewrite_instruction_v3_mode_controlled.txt",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo900_mode_jury_v1/prompts/generation_prompt_reference.txt",
+      "role": "prompt",
+      "pipeline_stage": "ct_generation",
+      "sha256": "2dc0e8c95264168dca7d19568cf9c6fb7e0cc273994bcce6a592e7493459f8e5"
+    },
+    {
+      "destination_path": "results/automatic_metrics/automatic_metric_manifest.json",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_base_vs_dpo501_final51_eval_v1/metadata/automatic_metric_manifest.json",
+      "role": "result",
+      "pipeline_stage": "automatic_evaluation",
+      "sha256": "48952c0aea94f0725c57e5f7c7b65f9b92387a79725d119146dbef8e36d40383"
+    },
+    {
+      "destination_path": "results/automatic_metrics/automatic_metric_summary.json",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_base_vs_dpo501_final51_eval_v1/automatic_metrics/outputs/automatic_metric_summary.json",
+      "role": "result",
+      "pipeline_stage": "automatic_evaluation",
+      "sha256": "9b3fb3300d094e4a9ec3aac0b486638e219a9e662fef47fcf47a4c66dc65c6c0"
+    },
+    {
+      "destination_path": "results/automatic_metrics/automatic_metric_summary.md",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_base_vs_dpo501_final51_eval_v1/automatic_metrics/reports/automatic_metric_summary.md",
+      "role": "result",
+      "pipeline_stage": "automatic_evaluation",
+      "sha256": "1c5c3717e5b9994f528e8190612220bd4470ca7196bed8049e02d9cd5e528b77"
+    },
+    {
+      "destination_path": "results/automatic_metrics/per_sample_metrics_102.jsonl",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_base_vs_dpo501_final51_eval_v1/automatic_metrics/outputs/per_sample_metrics_102.jsonl",
+      "role": "result",
+      "pipeline_stage": "automatic_evaluation",
+      "sha256": "ced8cd1244d562366674fede7ea2a088b09579d3b35b65659655f2414fefd293"
+    },
+    {
+      "destination_path": "results/generation/base_rewrites_51.jsonl",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_base_vs_dpo501_final51_v1/outputs/base/base_rewrites_51.jsonl",
+      "role": "result",
+      "pipeline_stage": "final_generation",
+      "sha256": "d6c3531751dd759829484eef4308254a8cbc4bdd2dfccf0bdf5fa2103dd9b951"
+    },
+    {
+      "destination_path": "results/generation/base_vs_dpo501_final51_generation_report.md",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_base_vs_dpo501_final51_v1/reports/base_vs_dpo501_final51_generation_report.md",
+      "role": "result",
+      "pipeline_stage": "final_generation",
+      "sha256": "f9d3078700e9d5aa53aa2c4815ac05abc5190703fc4ba9a1f64d626dbb764fe8"
+    },
+    {
+      "destination_path": "results/generation/base_vs_dpo501_final51_manifest.json",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_base_vs_dpo501_final51_v1/metadata/base_vs_dpo501_final51_manifest.json",
+      "role": "result",
+      "pipeline_stage": "final_generation",
+      "sha256": "33cc7492c29d0ec38b5be91af2dd6f651a21911a1435298a2534c5b44e1be1ab"
+    },
+    {
+      "destination_path": "results/generation/base_vs_dpo501_rewrites_51.jsonl",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_base_vs_dpo501_final51_v1/outputs/paired/base_vs_dpo501_rewrites_51.jsonl",
+      "role": "result",
+      "pipeline_stage": "final_generation",
+      "sha256": "a2638aec0cbf243bf012261caa7906c86521fa18b9178b1026109813b3f97cee"
+    },
+    {
+      "destination_path": "results/generation/dpo_rewrites_51.jsonl",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_base_vs_dpo501_final51_v1/outputs/dpo/dpo_rewrites_51.jsonl",
+      "role": "result",
+      "pipeline_stage": "final_generation",
+      "sha256": "aff25de452333c3f04fc4148685aa11924e8844b60fe7437c1367f80e3a27be7"
+    },
+    {
+      "destination_path": "results/generation/matched_pair_news_012_recovery.json",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_base_vs_dpo501_final51_v1/outputs/recovery/matched_pair_news_012.json",
+      "role": "result",
+      "pipeline_stage": "matched_recovery",
+      "sha256": "08163d990868a1bfd4923672e39088cc22b7999e0ee78b005621a98f84e9a342"
+    },
+    {
+      "destination_path": "results/generation/method_equivalence_audit.md",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_base_vs_dpo501_final51_v1/reports/method_equivalence_audit.md",
+      "role": "result",
+      "pipeline_stage": "final_generation",
+      "sha256": "538fc066416fc285ee8b16adee2f8db89a4758edead70f4e2f5c19ca0faefd68"
+    },
+    {
+      "destination_path": "results/gpt4o/final_runtime_and_artifacts.json",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_base_vs_dpo501_final51_eval_v1/metadata/final_runtime_and_artifacts.json",
+      "role": "result",
+      "pipeline_stage": "gpt4o_evaluation",
+      "sha256": "950064249fa8d020d22d9dfe3a914b9d77bff7bfbd2367fada2f8518a61a2f71"
+    },
+    {
+      "destination_path": "results/gpt4o/gpt4o_api_usage_cost_report.md",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_base_vs_dpo501_final51_eval_v1/reports/gpt4o_api_usage_cost_report.md",
+      "role": "result",
+      "pipeline_stage": "gpt4o_evaluation",
+      "sha256": "4f560a5317129b53e8a4699678fc3aff50bf899ad2e4d756ab66c91ff678c1af"
+    },
+    {
+      "destination_path": "results/gpt4o/gpt4o_evaluation_manifest.json",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_base_vs_dpo501_final51_eval_v1/metadata/gpt4o_evaluation_manifest.json",
+      "role": "result",
+      "pipeline_stage": "gpt4o_evaluation",
+      "sha256": "80bd302321f8814f244873ade241c0218da689302ff0b546c043fa7761968ee9"
+    },
+    {
+      "destination_path": "results/gpt4o/gpt4o_pricing_used.json",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_base_vs_dpo501_final51_eval_v1/metadata/gpt4o_pricing_used.json",
+      "role": "result",
+      "pipeline_stage": "gpt4o_evaluation",
+      "sha256": "66e397da4cc8a17e32b2e993084e0d91085b0f5f99b07713863d31823a98956c"
+    },
+    {
+      "destination_path": "results/gpt4o/gpt4o_substantive_similarity_report.md",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_base_vs_dpo501_final51_eval_v1/reports/gpt4o_substantive_similarity_report.md",
+      "role": "result",
+      "pipeline_stage": "gpt4o_evaluation",
+      "sha256": "37bc069b28c271cce6aa24c2eb562e61d605208fafb9b5a2d4ac51098dcc9045"
+    },
+    {
+      "destination_path": "results/gpt4o/preflight_manifest.json",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_base_vs_dpo501_final51_eval_v1/metadata/preflight_manifest.json",
+      "role": "result",
+      "pipeline_stage": "gpt4o_evaluation",
+      "sha256": "e0bf90b1ad3d17b8db0984040755e70fcbcfdbdc5b011f5e283774c984b6b1fe"
+    },
+    {
+      "destination_path": "results/gpt4o/substantive_similarity_api_usage.jsonl",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_base_vs_dpo501_final51_eval_v1/gpt4o/raw/substantive_similarity_api_usage.jsonl",
+      "role": "result",
+      "pipeline_stage": "gpt4o_evaluation",
+      "sha256": "8fa291fdfa296bcd7ce43647a7d2e6115fdec47ed8290ecc88c1f699b89fdb15"
+    },
+    {
+      "destination_path": "results/gpt4o/substantive_similarity_api_usage_summary.json",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_base_vs_dpo501_final51_eval_v1/gpt4o/processed/substantive_similarity_api_usage_summary.json",
+      "role": "result",
+      "pipeline_stage": "gpt4o_evaluation",
+      "sha256": "c375d8232936cb7f6ca7bb910652496756b2f7d60e741dea13307ec10849a5ce"
+    },
+    {
+      "destination_path": "results/gpt4o/substantive_similarity_final.jsonl",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_base_vs_dpo501_final51_eval_v1/gpt4o/raw/substantive_similarity_final.jsonl",
+      "role": "result",
+      "pipeline_stage": "gpt4o_evaluation",
+      "sha256": "6ced0d723c5af1ab41d8a9ce310f9e1f99286ffdb42e8e4099e21d9150f02788"
+    },
+    {
+      "destination_path": "results/gpt4o/substantive_similarity_pair_scores_51.jsonl",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_base_vs_dpo501_final51_eval_v1/gpt4o/processed/substantive_similarity_pair_scores_51.jsonl",
+      "role": "result",
+      "pipeline_stage": "gpt4o_evaluation",
+      "sha256": "a1fda250736b60ebab96b8e676e7aea36fa3f3f925c235be2baad97bc47006ab"
+    },
+    {
+      "destination_path": "results/gpt4o/substantive_similarity_summary.json",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_base_vs_dpo501_final51_eval_v1/gpt4o/processed/substantive_similarity_summary.json",
+      "role": "result",
+      "pipeline_stage": "gpt4o_evaluation",
+      "sha256": "a33b1607b69a38dbf6e8b7fbd9981e2a952d7f158493c33be1d3f4bba392681a"
+    },
+    {
+      "destination_path": "results/preference/final_pipeline_report.md",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo900_mode_jury_v1/reports/final_pipeline_report.md",
+      "role": "result",
+      "pipeline_stage": "preference_construction",
+      "sha256": "02a193651f0d8fa75140f0f0d797998578593655c73d549fad4c1d2428d3e1de"
+    },
+    {
+      "destination_path": "results/preference/setup_and_runtime.json",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo900_mode_jury_v1/reports/setup_and_runtime.json",
+      "role": "result",
+      "pipeline_stage": "preference_construction",
+      "sha256": "3f227d5d7ecb9836ebe5ff43e34facb6000b629dfe7080edfffa862db0f452fc"
+    },
+    {
+      "destination_path": "results/training/dpo_length_audit.md",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo501_train_v3/reports/dpo_length_audit.md",
+      "role": "result",
+      "pipeline_stage": "dpo_training",
+      "sha256": "2b454da2b6612f5e05efd49aeb2ba69c3209cf9fcdc8cb9c5077a1c500f8b6a2"
+    },
+    {
+      "destination_path": "results/training/preflight_manifest.json",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo501_train_v3/metadata/preflight_manifest.json",
+      "role": "result",
+      "pipeline_stage": "dpo_training",
+      "sha256": "55beb4120325d207fb5d9dda1a540e45200cb65072165d6cb51c38f86bc11023"
+    },
+    {
+      "destination_path": "results/training/train_status.json",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo501_train_v3/metadata/train_status.json",
+      "role": "result",
+      "pipeline_stage": "dpo_training",
+      "sha256": "9a54970ae4bc3eaf2a73854031170d7202f09095db4057391546c7773a251851"
+    },
+    {
+      "destination_path": "results/training/training_summary.md",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo501_train_v3/reports/training_summary.md",
+      "role": "result",
+      "pipeline_stage": "dpo_training",
+      "sha256": "56730316a3b40790a863255a18e3837a6ad3e386ff20d1a6e1801399b61bac0b"
+    },
+    {
+      "destination_path": "src/data/apply_source_eligibility.py",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/scripts/prepare_experiment_data_100.py",
+      "role": "code",
+      "pipeline_stage": "raw_source_preparation",
+      "sha256": "9423e81a3180151bae85e71a98f38fb7c9adee69a5269f205827224862b515f6"
+    },
+    {
+      "destination_path": "src/data/create_final700_heldout51.py",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo900_mode_jury_v1/scripts/create_final700_heldout51.py",
+      "role": "code",
+      "pipeline_stage": "heldout_selection",
+      "sha256": "5979e40ab7ad355ad871d2f4ec6e75df4ccce2055ec66064b43b2fe0de8cb870"
+    },
+    {
+      "destination_path": "src/data/create_shortened_heldout51.py",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo900_mode_jury_v1/scripts/create_shortened_heldout51.py",
+      "role": "code",
+      "pipeline_stage": "heldout_selection_helper",
+      "sha256": "04a0a1df1f618bd433d5c8d525f840bf2421723865db9b68a4eb6b2ba90bae5c"
+    },
+    {
+      "destination_path": "src/data/prepare_raw_domain_data.py",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/scripts/prepare_pilot_data.py",
+      "role": "code",
+      "pipeline_stage": "raw_source_preparation",
+      "sha256": "b3b5935722cb9d9c5c27503db71aae6c883be9b0232bfbdc4340de7f0be6c843"
+    },
+    {
+      "destination_path": "src/evaluation/aggregate_gpt4o_similarity.py",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_base_vs_dpo501_final51_eval_v1/scripts/aggregate_gpt4o_similarity.py",
+      "role": "code",
+      "pipeline_stage": "gpt4o_evaluation",
+      "sha256": "0b14a145862c794ad118a22d5bac1d6e4cd39396335efc796e29031797900f7b"
+    },
+    {
+      "destination_path": "src/evaluation/canonical_automatic_metrics.py",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo367_dataset_audit_v1/scripts/run_dpo367_automatic_metrics.py",
+      "role": "code",
+      "pipeline_stage": "automatic_evaluation_helper",
+      "sha256": "5f49f398a007986368136695313acf293400827f9707ec6d0679d5b8303a94cb"
+    },
+    {
+      "destination_path": "src/evaluation/canonical_metric_common.py",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo367_dataset_audit_v1/scripts/common.py",
+      "role": "code",
+      "pipeline_stage": "automatic_evaluation_helper",
+      "sha256": "6c538da1c4e174ba24c0495f6a13866b5ecf3fe985dbc69b80dea9d0bcec4ef5"
+    },
+    {
+      "destination_path": "src/evaluation/common.py",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_base_vs_dpo501_final51_eval_v1/scripts/common.py",
+      "role": "code",
+      "pipeline_stage": "final_evaluation",
+      "sha256": "3dc31613177a6d236ee9061f28077c3b192b6df8977c0052037b354bb0d9c3fa"
+    },
+    {
+      "destination_path": "src/evaluation/metric_suite.py",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo501_final_metrics_v1/scripts/run_final_metrics.py",
+      "role": "code",
+      "pipeline_stage": "automatic_evaluation_helper",
+      "sha256": "1d067ea74303796ddc88cc6fd69cfcabdab55a8873cb822c5827e53c3e3dc9e2"
+    },
+    {
+      "destination_path": "src/evaluation/reward/__init__.py",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/scripts/reward/__init__.py",
+      "role": "code",
+      "pipeline_stage": "automatic_evaluation_helper",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "destination_path": "src/evaluation/reward/factuality/__init__.py",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/scripts/reward/factuality/__init__.py",
+      "role": "code",
+      "pipeline_stage": "automatic_evaluation_helper",
+      "sha256": "d1815fa8fa98db595e777407e02ae35fdb0177dd7a14a54a85827ea22bc5bca7"
+    },
+    {
+      "destination_path": "src/evaluation/reward/factuality/base.py",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/scripts/reward/factuality/base.py",
+      "role": "code",
+      "pipeline_stage": "automatic_evaluation_helper",
+      "sha256": "0af5eefaf6238172ffabe14f5f56f4a0c50db40bc74301be7f0bd8175a6548cb"
+    },
+    {
+      "destination_path": "src/evaluation/reward/factuality/deterministic.py",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/scripts/reward/factuality/deterministic.py",
+      "role": "code",
+      "pipeline_stage": "automatic_evaluation_helper",
+      "sha256": "b832030e0030f65990e0b373373cfca20404267b0511055e719fafa72132ec31"
+    },
+    {
+      "destination_path": "src/evaluation/run_automatic_metrics.py",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_base_vs_dpo501_final51_eval_v1/scripts/run_automatic_metrics.py",
+      "role": "code",
+      "pipeline_stage": "automatic_evaluation",
+      "sha256": "626aa2eb3406fa54628d5a3a404b7c17fd89e3ad99f5293a17565491ba460c30"
+    },
+    {
+      "destination_path": "src/evaluation/run_gpt4o_substantive_similarity.py",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_base_vs_dpo501_final51_eval_v1/scripts/run_gpt4o_substantive_similarity.py",
+      "role": "code",
+      "pipeline_stage": "gpt4o_evaluation",
+      "sha256": "3fc7a61e6e1b59d8e23c44d22d8968d28369e56fd7a6ed9141ff87f4ccd641c9"
+    },
+    {
+      "destination_path": "src/evaluation/run_pipeline.py",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_base_vs_dpo501_final51_eval_v1/scripts/run_pipeline.py",
+      "role": "code",
+      "pipeline_stage": "final_evaluation",
+      "sha256": "b3d01e1097d536e8ed777223ce092fb75a580d79f901ad3341f864125af85196"
+    },
+    {
+      "destination_path": "src/generation/recover_matched_pair_news_012.py",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_base_vs_dpo501_final51_v1/scripts/recover_matched_pair_news_012.py",
+      "role": "code",
+      "pipeline_stage": "matched_recovery",
+      "sha256": "1665af730ec02f4b0eea09cd7d336f825fd8a10f816dad601d0ca2322314f49f"
+    },
+    {
+      "destination_path": "src/generation/run_base_vs_dpo501_final51.py",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_base_vs_dpo501_final51_v1/scripts/run_base_vs_dpo501_final51.py",
+      "role": "code",
+      "pipeline_stage": "final_generation",
+      "sha256": "a08cc1550bd75c4e38968114a5ea9ccf9e68c7f51cd8858d1abdbcf4c334e135"
+    },
+    {
+      "destination_path": "src/generation/run_tmux_job.sh",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_base_vs_dpo501_final51_v1/scripts/run_tmux_job.sh",
+      "role": "code",
+      "pipeline_stage": "final_generation",
+      "sha256": "71089102ea818e36ebc2386ab84900f2d795124c3b1920025ba7e6a8d083387f"
+    },
+    {
+      "destination_path": "src/jury/document_validation.py",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/experiments/copyright_jury/scripts/document_validation.py",
+      "role": "code",
+      "pipeline_stage": "jury_helper",
+      "sha256": "b0cd9892a5ef4ae9366d43250d91cdfbb70c03e4adcc8e5be03b0aab118aa036"
+    },
+    {
+      "destination_path": "src/jury/jury_model_loader.py",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_v3_overall_jury6vote_pilot_v1/scripts/run_overall_jury6vote.py",
+      "role": "code",
+      "pipeline_stage": "jury_helper",
+      "sha256": "efec12788e33933fa148b42140f58dc559baae6294e2e16c546b0c81395dcd8d"
+    },
+    {
+      "destination_path": "src/jury/model_inference_helper.py",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/experiments/copyright_jury/scripts/run_judge_v5_document.py",
+      "role": "code",
+      "pipeline_stage": "jury_helper",
+      "sha256": "4d2d52fdac4f5f09f1349a00bb6c00d05ae41b80d8917a397903c81489886ddb"
+    },
+    {
+      "destination_path": "src/jury/run_granite_jury.py",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_v3_direct_expr_jury28_granite_command_v1/scripts/run_granite_command_jury28.py",
+      "role": "code",
+      "pipeline_stage": "granite_jury",
+      "sha256": "f146b91a86730d153ed648c28fe82c149bb533196ab8222a5e0608cf07044ad8"
+    },
+    {
+      "destination_path": "src/jury/run_ministral_jury.py",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_v3_direct_expr_jury28_command_ministral_v3/scripts/run_command_ministral_v3.py",
+      "role": "code",
+      "pipeline_stage": "ministral_jury",
+      "sha256": "5c94dbaf012040c99fb5da30a11640043b10d30cdd233c135455a977ba5c7521"
+    },
+    {
+      "destination_path": "src/jury/run_qwen_direct_expr_jury.py",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_v3_direct_expr_jury28_v1/scripts/run_direct_expr_jury.py",
+      "role": "code",
+      "pipeline_stage": "qwen_jury",
+      "sha256": "fbd69624a346803ceae239e4aa2d072752eb2156cf32c8c0a242cc86baa7df76"
+    },
+    {
+      "destination_path": "src/jury/shortprompt_jury_loader.py",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_v3_shortprompt_overall_jury6vote_pilot_v1/scripts/run_shortprompt_jury.py",
+      "role": "code",
+      "pipeline_stage": "jury_helper",
+      "sha256": "2f71fa419f6476188208b41401d160b195c37be50a174e7cdaa621fa5d2b43a0"
+    },
+    {
+      "destination_path": "src/preference/run_dpo900_mode_jury_pipeline.py",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo900_mode_jury_v1/scripts/run_dpo900_mode_jury_pipeline.py",
+      "role": "code",
+      "pipeline_stage": "preference_construction",
+      "sha256": "f9d9e16aa583405f9a90c41aa48354a1dd2d63b4fff4fdee8fbdc5cbc384f7c4"
+    },
+    {
+      "destination_path": "src/preference/run_pipeline.sh",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo900_mode_jury_v1/scripts/run_pipeline.sh",
+      "role": "code",
+      "pipeline_stage": "preference_construction",
+      "sha256": "ef8fd75b86403a95e2aeff73c289290ab07e4e43b03edbc71b37bc3c0beb85b4"
+    },
+    {
+      "destination_path": "src/rewrite/run_hyperclovax_generation.py",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_pairwise_expand300_v1/scripts/run_expand300_rewrite_generation.py",
+      "role": "code",
+      "pipeline_stage": "ct_generation_helper",
+      "sha256": "4f7a69ebe0d94d25435cac3d4f76cf407f360f4540f9a01d8cc8932c59c023b8"
+    },
+    {
+      "destination_path": "src/rewrite/run_mode_controlled_generation.py",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_rewrite_prompt_v3_mode_margin_pilot30_v1/scripts/run_v3_generation.py",
+      "role": "code",
+      "pipeline_stage": "ct_generation",
+      "sha256": "6b32466d0d6397bfd2acd7d6358e96541384a7ac509293190239bf0efa5279d6"
+    },
+    {
+      "destination_path": "src/training/prepare_dpo501.py",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo501_train_v3/scripts/prepare_dpo501.py",
+      "role": "code",
+      "pipeline_stage": "dpo_preprocessing",
+      "sha256": "b5c7d22309264a50a44bfb78513098f18a91a801b43bbf3279dcb6b299771c80"
+    },
+    {
+      "destination_path": "src/training/run_dpo501_train.py",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo501_train_v3/scripts/run_dpo501_train.py",
+      "role": "code",
+      "pipeline_stage": "dpo_training",
+      "sha256": "598d3b95189bdfb8c51843f13eb93f72882e15622bf0f11b36f75edc58e95509"
+    },
+    {
+      "destination_path": "src/training/run_lora_dpo_checkpointed.py",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo501_train_v3/scripts/run_lora_dpo_checkpointed.py",
+      "role": "code",
+      "pipeline_stage": "dpo_training",
+      "sha256": "e61e6f570cdf9f4ac5d1a19f1ff5f76345d6c2aa71de8116792e3b353114abf5"
+    },
+    {
+      "destination_path": "src/training/run_tmux_job.sh",
+      "original_source_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo501_train_v3/scripts/run_tmux_job.sh",
+      "role": "code",
+      "pipeline_stage": "dpo_training",
+      "sha256": "cd97e71bea5d68e7ffb6d6f749822e834b3afd2540cdf77c06135bf227835235"
+    }
+  ]
+}
