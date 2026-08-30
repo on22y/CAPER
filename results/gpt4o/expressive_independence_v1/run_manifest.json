@@ -1,0 +1,35 @@
+{
+  "status": "COMPLETED",
+  "model": "gpt-4o",
+  "prompt_version": "expressive_independence_judge_v1",
+  "prompt_path": "/home/user20250805/gayeon/HCLT2026/work/hcx_final51_gpt4o_expressive_independence_v1/prompts/evaluation/gpt4o_expressive_independence_judge_v1.txt",
+  "prompt_sha256": "43d7792b51a42d8d4bd1448f3e79cbf545b5e995152433bde3570d1b87497290",
+  "input_artifacts": {
+    "heldout": {
+      "path": "/home/user20250805/gayeon/HCLT2026/work/hcx_dpo900_mode_jury_v1/data/splits/final_heldout_source_51_final700.jsonl",
+      "sha256": "8c66122c61c756a732d24576440dff0b8ec546338d4016769d563bb8623058f1"
+    },
+    "paired_base_dpo": {
+      "path": "/home/user20250805/gayeon/HCLT2026/work/hcx_base_vs_dpo501_final51_v1/outputs/paired/base_vs_dpo501_rewrites_51.jsonl",
+      "sha256": "a2638aec0cbf243bf012261caa7906c86521fa18b9178b1026109813b3f97cee"
+    }
+  },
+  "sample_count": 51,
+  "orders": [
+    "original",
+    "swapped"
+  ],
+  "expected_api_calls_without_retries": 102,
+  "temperature": 0,
+  "max_output_tokens": 80,
+  "structured_output": "strict_json_schema",
+  "human_annotation_accessed_or_used": false,
+  "started_at": "2026-08-30T09:30:49.647089+00:00",
+  "completed_at": "2026-08-30T09:32:48.295632+00:00",
+  "artifact_sha256": {
+    "raw_original_swapped.jsonl": "25a9f524ea435e486515bd38eee7dff6154d999649df0e8c0410829cb144501e",
+    "sample_level_results_51.jsonl": "c06f435735a7c28ccdedf6562e59e2f01c94d80c3bbe3f8e629850646a638736",
+    "summary.json": "933e933dd2a12160c993205e3897f0eac42d2fa0572743f535b3b94e782e9e53",
+    "api_usage.json": "caecd1d4483368555fa1a4159d69e306b211c1796c00bc3765fcf03dc86a0a09"
+  }
+}

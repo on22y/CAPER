@@ -1,0 +1,18 @@
+{
+  "successful_api_calls": 102,
+  "failed_calls": 0,
+  "retries": 0,
+  "input_tokens": 236934,
+  "cached_input_tokens": 4480,
+  "output_tokens": 2497,
+  "total_tokens": 239431,
+  "estimated_usd_cost": 0.611705,
+  "pricing": {
+    "model": "gpt-4o",
+    "input_usd_per_1m": 2.5,
+    "cached_input_usd_per_1m": 1.25,
+    "output_usd_per_1m": 10.0,
+    "pricing_checked_at": "2026-08-26",
+    "source": "https://developers.openai.com/api/docs/models/gpt-4o"
+  }
+}

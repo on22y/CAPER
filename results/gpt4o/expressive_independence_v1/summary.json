@@ -1,0 +1,34 @@
+{
+  "samples": 51,
+  "judgments": 102,
+  "preference_outcomes": {
+    "dpo": 28,
+    "unstable": 20,
+    "base": 3
+  },
+  "stable_preferences": 31,
+  "unstable_preferences": 20,
+  "factual_error_diagnostics": {
+    "base_consistent": 49,
+    "dpo_consistent": 38,
+    "base_error_true_when_consistent": 0,
+    "dpo_error_true_when_consistent": 3
+  },
+  "by_domain": {
+    "news": {
+      "dpo": 6,
+      "unstable": 9,
+      "base": 2
+    },
+    "petition": {
+      "unstable": 7,
+      "dpo": 10
+    },
+    "sns": {
+      "dpo": 12,
+      "base": 1,
+      "unstable": 4
+    }
+  },
+  "note": "factual_error is a binary diagnostic, not a preference score"
+}
