@@ -10,3 +10,10 @@ checkpoints/
 *.pt
 *.pth
 .env
+models/
+outputs/
+wandb/
+offload/
+*.tmp
+.venv/
+venv/

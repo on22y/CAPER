@@ -13,7 +13,7 @@ from statistics import mean, median
 from typing import Any
 
 
-PROJECT = Path("/home/user20250805/gayeon/HCLT2026")
+PROJECT = Path(__file__).resolve().parents[2]
 ROOT = PROJECT / "work/hcx_dpo900_mode_jury_v1"
 RAW = PROJECT / "data/raw"
 SOURCE = ROOT / "data/splits/final_heldout_source_51.jsonl"

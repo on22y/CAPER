@@ -12,7 +12,7 @@ from typing import Any
 
 from transformers import AutoTokenizer
 
-PROJECT = Path("/home/user20250805/gayeon/HCLT2026")
+PROJECT = Path(__file__).resolve().parents[2]
 ROOT = PROJECT / "work/hcx_v3_direct_expr_jury28_command_ministral_v3"
 CANONICAL_ROOT = PROJECT / "work/hcx_v3_direct_expr_jury28_v1"
 COMMON_ROOT = PROJECT / "work/hcx_v3_direct_expr_jury28_granite_command_v1"
@@ -52,7 +52,7 @@ SPECS = {
     "ministral3": {
         "model_id": "mistralai/Ministral-3-8B-Instruct-2512",
         "hf_id": "mistralai/Ministral-3-8B-Instruct-2512",
-        "local_path": "/home/user20250805/.cache/huggingface/hub/models--mistralai--Ministral-3-8B-Instruct-2512/snapshots/5b26027e7b19eeb4b7352e1fed3926375dd2cb4d",
+        "local_path": str(PROJECT / "models/judges/Ministral-3-8B-Instruct-2512"),
         "revision": "5b26027e7b19eeb4b7352e1fed3926375dd2cb4d",
         "family": "ministral3",
         "trust_remote_code": False,

@@ -1,0 +1,67 @@
+{
+  "reference_run": {
+    "name": "HyperCLOVAX DPO501 v3 successful run",
+    "actual_trl_rows": 501,
+    "comparison_dataset_rows": 498,
+    "optimization_steps": 375,
+    "gpu_topology": "single process model-parallel across 2 x RTX 4090",
+    "effective_batch_size": 4,
+    "runtime_seconds": 9297.728,
+    "train_loss": 0.306577103972435
+  },
+  "training": {
+    "num_train_epochs": 3.0,
+    "beta": 0.1,
+    "learning_rate": 5e-06,
+    "per_device_train_batch_size": 1,
+    "gradient_accumulation_steps": 4,
+    "target_effective_batch_size": 4,
+    "max_length": 3072,
+    "truncation_mode": "keep_start",
+    "bf16": true,
+    "fp16": false,
+    "tf32": null,
+    "gradient_checkpointing": true,
+    "precompute_ref_log_probs": false,
+    "remove_unused_columns": false,
+    "dataloader_pin_memory": false,
+    "optim": "adamw_torch_fused",
+    "lr_scheduler_type": "linear",
+    "warmup_steps": 0,
+    "warmup_ratio": null,
+    "weight_decay": 0.0,
+    "max_grad_norm": 1.0,
+    "seed": 42,
+    "data_seed": null,
+    "loss_type": "sigmoid",
+    "label_smoothing": 0.0,
+    "save_strategy": "steps",
+    "save_steps": 50,
+    "save_total_limit": 2,
+    "logging_steps": 5
+  },
+  "lora": {
+    "r": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05,
+    "bias": "none",
+    "task_type": "CAUSAL_LM",
+    "modules_to_save": null
+  },
+  "models": {
+    "hyperclovax": {
+      "model_id": "naver-hyperclovax/HyperCLOVAX-SEED-Think-14B",
+      "target_module_suffixes": ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
+    },
+    "qwen3": {
+      "model_id": "Qwen/Qwen3-14B",
+      "target_module_suffixes": ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"],
+      "chat_template_options": {"enable_thinking": false}
+    },
+    "gemma3": {
+      "model_id": "google/gemma-3-12b-it",
+      "target_module_suffixes": ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"],
+      "target_scope_contains": "language_model.layers."
+    }
+  }
+}

@@ -16,13 +16,14 @@ cannot be reliably captured by span matching.
 
 from __future__ import annotations
 
+import os
 import re
 import threading
 from typing import Any
 
 from .base import Span, char_ngram_jaccard, loose_contains, normalize_text, safe_mean
 
-NER_MODEL_NAME = "chunwoolee0/klue_ner_roberta_model"
+NER_MODEL_NAME = os.environ.get("HCLT_NER_MODEL", "chunwoolee0/klue_ner_roberta_model")
 
 _KLUE_TO_FACTUAL_UNIT = {
     "PS": "PERSON",

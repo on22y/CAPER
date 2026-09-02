@@ -15,14 +15,14 @@ from typing import Any
 import torch
 
 
-PROJECT = Path("/home/user20250805/gayeon/HCLT2026")
-ROOT = PROJECT / "work/hcx_base_vs_dpo501_final51_eval_v1"
-INPUT = PROJECT / "work/hcx_base_vs_dpo501_final51_v1/outputs/paired/base_vs_dpo501_rewrites_51.jsonl"
-CANONICAL = PROJECT / "work/hcx_dpo501_final_metrics_v1/scripts/run_final_metrics.py"
-PER_SAMPLE = ROOT / "automatic_metrics/outputs/per_sample_metrics_102.jsonl"
-SUMMARY = ROOT / "automatic_metrics/outputs/automatic_metric_summary.json"
-REPORT = ROOT / "automatic_metrics/reports/automatic_metric_summary.md"
-MANIFEST = ROOT / "metadata/automatic_metric_manifest.json"
+PROJECT = Path(__file__).resolve().parents[2]
+ROOT = PROJECT / "results/automatic_metrics"
+INPUT = PROJECT / "results/generation/base_vs_dpo501_rewrites_51.jsonl"
+CANONICAL = PROJECT / "src/evaluation/metric_suite.py"
+PER_SAMPLE = ROOT / "per_sample_metrics_102.jsonl"
+SUMMARY = ROOT / "automatic_metric_summary.json"
+REPORT = ROOT / "automatic_metric_summary.md"
+MANIFEST = ROOT / "automatic_metric_manifest.json"
 
 METRICS = (
     "Entity F1", "Numeric/Date F1", "BiNLI Support", "BiNLI Coverage", "BiNLI F1",

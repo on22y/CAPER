@@ -24,7 +24,7 @@ import torch
 from transformers import AutoTokenizer, HyperCLOVAXConfig, HyperCLOVAXForCausalLM, set_seed
 
 
-ROOT = Path("/home/user20250805/gayeon/HCLT2026")
+ROOT = Path(__file__).resolve().parents[2]
 WORK = ROOT / "work/hcx_pairwise_expand300_v1"
 GENERATOR = {
     "model_name": "hyperclovax",

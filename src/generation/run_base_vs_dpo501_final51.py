@@ -24,35 +24,35 @@ except Exception:  # noqa: BLE001
     np = None
 
 
-ROOT = Path("/home/user20250805/gayeon/HCLT2026")
-WORK = ROOT / "work/hcx_base_vs_dpo501_final51_v1"
-CANONICAL_WORK = ROOT / "work/hcx_pairwise_pilot90_v1"
-OLD_EVAL_WORK = ROOT / "work/hcx_base_vs_dpo_heldout60_v1"
-FINAL_HELDOUT_WORK = ROOT / "work/hcx_dpo900_mode_jury_v1"
-DPO_WORK = ROOT / "work/hcx_dpo501_train_v3"
-OLD_DPO_ADAPTER = ROOT / "work/hcx_dpo_pilot186_v1/checkpoints/final_adapter"
+ROOT = Path(__file__).resolve().parents[2]
+WORK = ROOT / "results/generation"
+CANONICAL_WORK = ROOT
+OLD_EVAL_WORK = ROOT
+FINAL_HELDOUT_WORK = ROOT
+DPO_WORK = ROOT / "results/training"
+OLD_DPO_ADAPTER = ROOT / "models/adapters/old_pilot_adapter"
 
-HELDOUT_PATH = FINAL_HELDOUT_WORK / "data/splits/final_heldout_source_51_final700.jsonl"
-HELDOUT_MANIFEST = FINAL_HELDOUT_WORK / "data/splits/final_heldout_source_51_final700_manifest.json"
-DPO_MANIFEST = DPO_WORK / "metadata/train_status.json"
-BASE_MODEL = ROOT / "models/HyperCLOVAX-SEED-Think-14B"
-ADAPTER = DPO_WORK / "checkpoints/final_adapter"
-INSTRUCTION = ROOT / "work/hcx_base_vs_expanded_dpo_final60_v1/prompts/document_rewrite_instruction_v1.txt"
-OLD_SCRIPT = OLD_EVAL_WORK / "scripts/run_base_vs_dpo_heldout60.py"
-CANONICAL_CONFIG = CANONICAL_WORK / "configs/hcx_generation_config.json"
+HELDOUT_PATH = ROOT / "data/heldout/final_heldout_source_51_final700.jsonl"
+HELDOUT_MANIFEST = ROOT / "data/heldout/final_heldout_source_51_final700_manifest.json"
+DPO_MANIFEST = ROOT / "results/training/train_status.json"
+BASE_MODEL = Path(os.environ.get("HCLT_BASE_MODEL", ROOT / "models/HyperCLOVAX-SEED-Think-14B"))
+ADAPTER = Path(os.environ.get("HCLT_DPO_ADAPTER", ROOT / "models/adapters/dpo501_final_adapter"))
+INSTRUCTION = ROOT / "prompts/rewrite/document_rewrite_instruction_v1.txt"
+OLD_SCRIPT = ROOT / "src/generation/run_base_vs_dpo501_final51.py"
+CANONICAL_CONFIG = ROOT / "configs/hcx_generation_config.json"
 
-BASE_OUT = WORK / "outputs/base/base_rewrites_51.jsonl"
-DPO_OUT = WORK / "outputs/dpo/dpo_rewrites_51.jsonl"
-BASE_RAW = WORK / "outputs/base/base_rewrites_51_raw.jsonl"
-DPO_RAW = WORK / "outputs/dpo/dpo_rewrites_51_raw.jsonl"
-PAIRED_OUT = WORK / "outputs/paired/base_vs_dpo501_rewrites_51.jsonl"
-PIPELINE_LOG = WORK / "logs/pipeline.log"
-BASE_LOG = WORK / "logs/base_generation.log"
-DPO_LOG = WORK / "logs/dpo_generation.log"
-PAIRING_LOG = WORK / "logs/pairing.log"
-MANIFEST_OUT = WORK / "metadata/base_vs_dpo501_final51_manifest.json"
-METHOD_AUDIT = WORK / "reports/method_equivalence_audit.md"
-FINAL_REPORT = WORK / "reports/base_vs_dpo501_final51_generation_report.md"
+BASE_OUT = WORK / "base_rewrites_51.jsonl"
+DPO_OUT = WORK / "dpo_rewrites_51.jsonl"
+BASE_RAW = WORK / "base_rewrites_51_raw.jsonl"
+DPO_RAW = WORK / "dpo_rewrites_51_raw.jsonl"
+PAIRED_OUT = WORK / "base_vs_dpo501_rewrites_51.jsonl"
+PIPELINE_LOG = WORK / "pipeline.log"
+BASE_LOG = WORK / "base_generation.log"
+DPO_LOG = WORK / "dpo_generation.log"
+PAIRING_LOG = WORK / "pairing.log"
+MANIFEST_OUT = WORK / "base_vs_dpo501_final51_manifest.json"
+METHOD_AUDIT = WORK / "method_equivalence_audit.md"
+FINAL_REPORT = WORK / "base_vs_dpo501_final51_generation_report.md"
 EXPECTED_HELDOUT_SHA = "8c66122c61c756a732d24576440dff0b8ec546338d4016769d563bb8623058f1"
 
 HCX_USE_CACHE = True

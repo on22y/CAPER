@@ -12,7 +12,7 @@ from typing import Any
 import torch
 
 
-PROJECT = Path("/home/user20250805/gayeon/HCLT2026")
+PROJECT = Path(__file__).resolve().parents[2]
 ROOT = PROJECT / "work/hcx_v3_shortprompt_overall_jury6vote_pilot_v1"
 OLD_ROOT = PROJECT / "work/hcx_v3_overall_jury6vote_pilot_v1"
 OLD_SCRIPT = OLD_ROOT / "scripts/run_overall_jury6vote.py"

@@ -10,15 +10,15 @@ import unicodedata
 from pathlib import Path
 from typing import Any
 
-PROJECT = Path("/home/user20250805/gayeon/HCLT2026")
-ROOT = PROJECT / "work/hcx_dpo367_dataset_audit_v1"
-CANONICAL = PROJECT / "work/hcx_dpo_expanded367_v1/data/preferences/dpo_preferences_combined_367.jsonl"
-TRAIN = PROJECT / "work/hcx_dpo_expanded367_v1/data/dpo/dpo_train_367_chatformatted.jsonl"
-PREF_INITIAL = PROJECT / "work/hcx_pairwise_nonpilot210_v1/preferences/dpo_pseudo_preferences_300_survivors.jsonl"
-PREF_ADDITIONAL = PROJECT / "work/hcx_pairwise_expand300_v1/preferences/expand300_dpo_pseudo_preferences_survivors.jsonl"
-PREFLIGHT = PROJECT / "work/hcx_dpo_expanded367_v1/data/dpo/token_length_preflight.json"
-TRAIN_LOG = PROJECT / "work/hcx_dpo_expanded367_v1/logs/lora_dpo_training.log"
-PROMPT = ROOT / "prompts/gpt4o_substantive_expressive_similarity_system_prompt_v1.txt"
+PROJECT = Path(__file__).resolve().parents[2]
+ROOT = PROJECT / "results/automatic_metrics"
+CANONICAL = PROJECT / "data/preferences/dpo_preferences_all_survivors_501.jsonl"
+TRAIN = PROJECT / "data/preferences/dpo_train_501_chatformatted.jsonl"
+PREF_INITIAL = PROJECT / "data/preferences/dpo_preferences_all_survivors_501.jsonl"
+PREF_ADDITIONAL = PROJECT / "data/preferences/dpo_preferences_all_survivors_501.jsonl"
+PREFLIGHT = PROJECT / "data/preferences/token_length_preflight.json"
+TRAIN_LOG = PROJECT / "results/training/train_status.json"
+PROMPT = PROJECT / "prompts/evaluation/gpt4o_expressive_independence_judge_v1.txt"
 MODEL = "gpt-4o"
 PROMPT_VERSION = "substantive_similarity_v1"
 

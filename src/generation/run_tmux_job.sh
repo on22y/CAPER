@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-ROOT=/home/user20250805/gayeon/HCLT2026/work/hcx_base_vs_dpo501_final51_v1
-source /home/user20250805/anaconda3/etc/profile.d/conda.sh
+ROOT=$(cd "$(dirname "$0")/../.." && pwd)
+source "$(conda info --base)/etc/profile.d/conda.sh"
 conda activate hclt
 export CUDA_VISIBLE_DEVICES=0,1
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True

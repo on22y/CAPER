@@ -16,7 +16,7 @@ from typing import Any
 import torch
 from transformers import AutoTokenizer
 
-PROJECT = Path("/home/user20250805/gayeon/HCLT2026")
+PROJECT = Path(__file__).resolve().parents[2]
 ROOT = PROJECT / "work/hcx_v3_direct_expr_jury28_granite_command_v1"
 CANONICAL_ROOT = PROJECT / "work/hcx_v3_direct_expr_jury28_v1"
 BASE_SCRIPT = PROJECT / "work/hcx_v3_overall_jury6vote_pilot_v1/scripts/run_overall_jury6vote.py"

@@ -5,6 +5,7 @@ import argparse
 import gc
 import json
 import math
+import os
 import re
 import sys
 import unicodedata
@@ -17,14 +18,14 @@ from tqdm import tqdm
 
 from common import ROOT, atomic_json, atomic_text, canonical_rows, normalize_text
 
-HCLT = Path("/home/user20250805/gayeon/HCLT2026")
+HCLT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(HCLT / "scripts"))
 from reward.factuality import deterministic as det_mod  # noqa: E402
 
-NER_ID = "chunwoolee0/klue_ner_roberta_model"
-NLI_ID = "joeddav/xlm-roberta-large-xnli"
+NER_ID = os.environ.get("HCLT_NER_MODEL", "chunwoolee0/klue_ner_roberta_model")
+NLI_ID = os.environ.get("HCLT_NLI_MODEL", "joeddav/xlm-roberta-large-xnli")
 STS_ID = "sentence-transformers/paraphrase-multilingual-mpnet-base-v2"
-BERTSCORE_ID = "xlm-roberta-large"
+BERTSCORE_ID = os.environ.get("HCLT_BERTSCORE_MODEL", "xlm-roberta-large")
 WORD_RE = re.compile(r"[가-힣A-Za-z0-9%._+-]+")
 SENT_RE = re.compile(r"[^.!?。！？…\n]+[.!?。！？…]?")
 NUM_DATE_RE = re.compile(

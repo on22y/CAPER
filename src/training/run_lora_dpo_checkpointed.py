@@ -18,17 +18,17 @@ from transformers import AutoTokenizer, HyperCLOVAXConfig, HyperCLOVAXForCausalL
 from trl import DPOConfig, DPOTrainer
 
 
-ROOT = Path("/home/user20250805/gayeon/HCLT2026")
-WORK = ROOT / "work/hcx_dpo_expanded367_v1"
-MODEL_PATH = ROOT / "models/HyperCLOVAX-SEED-Think-14B"
-TRAIN_PATH = WORK / "data/dpo/dpo_train_367_chatformatted.jsonl"
-TOKEN_PREFLIGHT = WORK / "data/dpo/token_length_preflight.json"
-CONFIG_PATH = WORK / "configs/lora_dpo_expanded367_config.json"
-MANIFEST_PATH = WORK / "metadata/dpo_expanded367_manifest.json"
-REPORT_PATH = WORK / "reports/dpo_expanded367_training_report.md"
-FINAL_ADAPTER = WORK / "checkpoints/final_adapter"
-SMOKE_ADAPTER = WORK / "checkpoints/smoke_test_adapter"
-OFFLOAD_DIR = WORK / "checkpoints/offload"
+ROOT = Path(__file__).resolve().parents[2]
+WORK = ROOT / "results/training"
+MODEL_PATH = Path(os.environ.get("HCLT_BASE_MODEL", ROOT / "models/HyperCLOVAX-SEED-Think-14B"))
+TRAIN_PATH = ROOT / "data/preferences/dpo_train_501_chatformatted.jsonl"
+TOKEN_PREFLIGHT = ROOT / "data/preferences/token_length_preflight.json"
+CONFIG_PATH = ROOT / "configs/lora_dpo501_config.json"
+MANIFEST_PATH = ROOT / "results/training/preflight_manifest.json"
+REPORT_PATH = ROOT / "results/training/training_summary.md"
+FINAL_ADAPTER = Path(os.environ.get("HCLT_DPO_ADAPTER_OUT", ROOT / "models/adapters/dpo501_final_adapter"))
+SMOKE_ADAPTER = ROOT / "results/training/smoke_test_adapter"
+OFFLOAD_DIR = ROOT / "results/training/offload"
 
 
 def now() -> str:

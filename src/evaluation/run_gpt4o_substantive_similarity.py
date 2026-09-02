@@ -11,7 +11,7 @@ from pathlib import Path
 
 from common import MODEL, PROMPT, PROMPT_VERSION, ROOT, append_jsonl, canonical_rows, read_jsonl
 
-ENV = Path("/home/user20250805/gayeon/.env")
+ENV = Path(os.environ.get("ENV_FILE", Path(__file__).resolve().parents[2] / ".env"))
 
 
 def user_prompt(domain: str, source: str, candidate_a: str, candidate_b: str) -> str:

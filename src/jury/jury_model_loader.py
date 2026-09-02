@@ -17,7 +17,7 @@ from typing import Any
 import torch
 
 
-PROJECT = Path("/home/user20250805/gayeon/HCLT2026")
+PROJECT = Path(__file__).resolve().parents[2]
 ROOT = PROJECT / "work/hcx_v3_overall_jury6vote_pilot_v1"
 SOURCE = PROJECT / "work/hcx_rewrite_prompt_v3_mode_margin_pilot30_v1/outputs/rewrites/pilot_v3_mode_controlled_rewrites_30x2.jsonl"
 ATTACHMENT = Path("/home/user20250805/.codex/attachments/d644de71-6047-4cef-9b96-f623b319b3b0/pasted-text.txt")

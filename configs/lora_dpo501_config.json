@@ -1,5 +1,5 @@
 {
-  "base_model": "/home/user20250805/gayeon/HCLT2026/models/HyperCLOVAX-SEED-Think-14B",
+  "base_model": "models/HyperCLOVAX-SEED-Think-14B",
   "dtype": "bfloat16",
   "device_map": "auto",
   "use_cache": false,

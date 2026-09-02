@@ -9,7 +9,7 @@ import time
 from pathlib import Path
 
 
-PROJECT = Path("/home/user20250805/gayeon/HCLT2026")
+PROJECT = Path(__file__).resolve().parents[2]
 ROOT = PROJECT / "work/hcx_rewrite_prompt_v3_mode_margin_pilot30_v1"
 BASE_SCRIPT = PROJECT / "work/hcx_pairwise_expand300_v1/scripts/run_expand300_rewrite_generation.py"
 CONFIG = PROJECT / "work/hcx_pairwise_expand300_v1/configs/hcx_generation_config.json"

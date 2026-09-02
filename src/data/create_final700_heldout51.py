@@ -11,7 +11,7 @@ from statistics import mean, median
 from typing import Any
 
 
-PROJECT = Path("/home/user20250805/gayeon/HCLT2026")
+PROJECT = Path(__file__).resolve().parents[2]
 ROOT = PROJECT / "work/hcx_dpo900_mode_jury_v1"
 REUSED_SCRIPT = ROOT / "scripts/create_shortened_heldout51.py"
 EXCLUSION_MANIFEST = ROOT / "data/splits/final_heldout_source_51_shortened_manifest.json"

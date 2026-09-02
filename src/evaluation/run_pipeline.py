@@ -11,12 +11,12 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 
-PROJECT = Path("/home/user20250805/gayeon/HCLT2026")
-ROOT = PROJECT / "work/hcx_base_vs_dpo501_final51_eval_v1"
-INPUT = PROJECT / "work/hcx_base_vs_dpo501_final51_v1/outputs/paired/base_vs_dpo501_rewrites_51.jsonl"
-PROMPT = ROOT / "prompts/gpt4o_substantive_expressive_similarity_system_prompt_v1.txt"
-GPT_RUNNER = ROOT / "scripts/run_gpt4o_substantive_similarity.py"
-CANONICAL_GPT_RUNNER = PROJECT / "work/hcx_dpo367_dataset_audit_v1/scripts/run_gpt4o_substantive_similarity.py"
+PROJECT = Path(__file__).resolve().parents[2]
+ROOT = PROJECT / "results/evaluation_run"
+INPUT = PROJECT / "results/generation/base_vs_dpo501_rewrites_51.jsonl"
+PROMPT = PROJECT / "prompts/evaluation/gpt4o_expressive_independence_judge_v1.txt"
+GPT_RUNNER = PROJECT / "src/evaluation/run_gpt4o_substantive_similarity.py"
+CANONICAL_GPT_RUNNER = PROJECT / "src/evaluation/run_gpt4o_substantive_similarity.py"
 EXPECTED_INPUT_SHA = "a2638aec0cbf243bf012261caa7906c86521fa18b9178b1026109813b3f97cee"
 EXPECTED_PROMPT_SHA = "ee4383acad495ee63d42d22bd7a10f2a5b0e216cbafd6aca9d0894522479c542"
 

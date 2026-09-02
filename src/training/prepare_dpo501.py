@@ -12,16 +12,16 @@ from typing import Any
 from transformers import AutoTokenizer
 
 
-PROJECT = Path("/home/user20250805/gayeon/HCLT2026")
-WORK = PROJECT / "work/hcx_dpo501_train_v1"
-INPUT = PROJECT / "work/hcx_dpo900_mode_jury_v1/outputs/preferences/dpo_preferences_all_survivors.jsonl"
-CANONICAL_PREF = PROJECT / "work/hcx_dpo_expanded367_v1/data/preferences/dpo_preferences_combined_367.jsonl"
-MODEL = PROJECT / "models/HyperCLOVAX-SEED-Think-14B"
-TRAIN = WORK / "data/dpo/dpo_train_501_chatformatted.jsonl"
-TOKEN_PREFLIGHT = WORK / "data/dpo/token_length_preflight.json"
+PROJECT = Path(__file__).resolve().parents[2]
+WORK = PROJECT / "results/training"
+INPUT = PROJECT / "data/preferences/dpo_preferences_all_survivors_501.jsonl"
+CANONICAL_PREF = PROJECT / "data/preferences/dpo_preferences_all_survivors_501.jsonl"
+MODEL = Path(__import__("os").environ.get("HCLT_BASE_MODEL", PROJECT / "models/HyperCLOVAX-SEED-Think-14B"))
+TRAIN = PROJECT / "data/preferences/dpo_train_501_chatformatted.jsonl"
+TOKEN_PREFLIGHT = PROJECT / "data/preferences/token_length_preflight.json"
 MANIFEST = WORK / "metadata/preflight_manifest.json"
 REPORT = WORK / "reports/dpo_length_audit.md"
-CONFIG = WORK / "configs/lora_dpo501_config.json"
+CONFIG = PROJECT / "configs/lora_dpo501_config.json"
 MAX_LENGTH = 3072
 
 

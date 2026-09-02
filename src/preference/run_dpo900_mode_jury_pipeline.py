@@ -19,7 +19,7 @@ from pathlib import Path
 from typing import Any
 
 
-PROJECT = Path("/home/user20250805/gayeon/HCLT2026")
+PROJECT = Path(__file__).resolve().parents[2]
 ROOT = PROJECT / "work/hcx_dpo900_mode_jury_v1"
 RAW = PROJECT / "data/raw"
 SEED = 20260828

@@ -9,10 +9,10 @@ from pathlib import Path
 from typing import Any
 
 
-PROJECT = Path("/home/user20250805/gayeon/HCLT2026")
-ROOT = PROJECT / "work/hcx_base_vs_dpo501_final51_eval_v1"
-CANONICAL = PROJECT / "work/hcx_base_vs_dpo501_final51_v1/outputs/paired/base_vs_dpo501_rewrites_51.jsonl"
-PROMPT = ROOT / "prompts/gpt4o_substantive_expressive_similarity_system_prompt_v1.txt"
+PROJECT = Path(__file__).resolve().parents[2]
+ROOT = PROJECT / "results/gpt4o/substantive_similarity_v1"
+CANONICAL = PROJECT / "results/generation/base_vs_dpo501_rewrites_51.jsonl"
+PROMPT = PROJECT / "prompts/evaluation/gpt4o_expressive_independence_judge_v1.txt"
 MODEL = "gpt-4o"
 PROMPT_VERSION = "substantive_similarity_v1"
 

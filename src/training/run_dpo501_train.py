@@ -7,9 +7,9 @@ import sys
 from pathlib import Path
 
 
-PROJECT = Path("/home/user20250805/gayeon/HCLT2026")
-WORK = PROJECT / "work/hcx_dpo501_train_v3"
-REUSED = PROJECT / "work/hcx_dpo501_train_v3/scripts/run_lora_dpo_checkpointed.py"
+PROJECT = Path(__file__).resolve().parents[2]
+WORK = PROJECT / "results/training"
+REUSED = PROJECT / "src/training/run_lora_dpo_checkpointed.py"
 
 
 def load_reused():
@@ -20,15 +20,15 @@ def load_reused():
     sys.modules[spec.name] = module
     spec.loader.exec_module(module)
     module.WORK = WORK
-    module.MODEL_PATH = PROJECT / "models/HyperCLOVAX-SEED-Think-14B"
-    module.TRAIN_PATH = WORK / "data/dpo/dpo_train_501_chatformatted.jsonl"
-    module.TOKEN_PREFLIGHT = WORK / "data/dpo/token_length_preflight.json"
-    module.CONFIG_PATH = WORK / "configs/lora_dpo501_config.json"
+    module.MODEL_PATH = Path(__import__("os").environ.get("HCLT_BASE_MODEL", PROJECT / "models/HyperCLOVAX-SEED-Think-14B"))
+    module.TRAIN_PATH = PROJECT / "data/preferences/dpo_train_501_chatformatted.jsonl"
+    module.TOKEN_PREFLIGHT = PROJECT / "data/preferences/token_length_preflight.json"
+    module.CONFIG_PATH = PROJECT / "configs/lora_dpo501_config.json"
     module.MANIFEST_PATH = WORK / "metadata/preflight_manifest.json"
     module.REPORT_PATH = WORK / "reports/training_summary.md"
-    module.FINAL_ADAPTER = WORK / "checkpoints/final_adapter"
-    module.SMOKE_ADAPTER = WORK / "checkpoints/smoke_test_adapter"
-    module.OFFLOAD_DIR = WORK / "checkpoints/offload"
+    module.FINAL_ADAPTER = Path(__import__("os").environ.get("HCLT_DPO_ADAPTER_OUT", PROJECT / "models/adapters/dpo501_final_adapter"))
+    module.SMOKE_ADAPTER = WORK / "smoke_test_adapter"
+    module.OFFLOAD_DIR = WORK / "offload"
     return module
 
 

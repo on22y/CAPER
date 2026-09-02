@@ -18,7 +18,7 @@ from typing import Any
 
 import torch
 
-PROJECT = Path("/home/user20250805/gayeon/HCLT2026")
+PROJECT = Path(__file__).resolve().parents[2]
 ROOT = PROJECT / "work/hcx_v3_direct_expr_jury28_v1"
 PREV_ROOT = PROJECT / "work/hcx_v3_shortprompt_overall_jury6vote_pilot_v1"
 PREV_SCRIPT = PREV_ROOT / "scripts/run_shortprompt_jury.py"

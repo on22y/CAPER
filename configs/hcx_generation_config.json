@@ -1,6 +1,6 @@
 {
   "model_id": "naver-hyperclovax/HyperCLOVAX-SEED-Think-14B",
-  "local_path": "/home/user20250805/gayeon/HCLT2026/models/HyperCLOVAX-SEED-Think-14B",
+  "local_path": "models/HyperCLOVAX-SEED-Think-14B",
   "backend": "transformers",
   "inference_backend": "transformers",
   "dtype": "bfloat16",

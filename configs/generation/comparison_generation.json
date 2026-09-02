@@ -1,0 +1,12 @@
+{
+  "do_sample": true,
+  "temperature": 0.7,
+  "top_p": 0.9,
+  "top_k": null,
+  "repetition_penalty": 1.05,
+  "max_new_tokens": 1536,
+  "use_cache": true,
+  "max_attempts": 3,
+  "seed_rule": "int(SHA256(sample_id + '|heldout|rewrite' [+ retry suffix])[:8], 16)",
+  "output_schema": {"rewrite": "string"}
+}

@@ -19,14 +19,14 @@ import torch
 from pecab import PeCab
 
 
-PROJECT = Path("/home/user20250805/gayeon/HCLT2026")
-ROOT = PROJECT / "work/hcx_dpo501_final_metrics_v1"
-INPUT = PROJECT / "work/hcx_dpo900_mode_jury_v1/outputs/preferences/dpo_preferences_all_survivors.jsonl"
-CANONICAL = PROJECT / "work/hcx_dpo367_dataset_audit_v1/scripts/run_dpo367_automatic_metrics.py"
-PER_SAMPLE = ROOT / "outputs/per_sample_final_metrics.jsonl"
-SUMMARY = ROOT / "outputs/final_metric_summary.json"
-REPORT = ROOT / "reports/final_metric_summary.md"
-MANIFEST = ROOT / "outputs/final_metric_manifest.json"
+PROJECT = Path(__file__).resolve().parents[2]
+ROOT = PROJECT / "results/final_metrics"
+INPUT = PROJECT / "data/preferences/dpo_preferences_all_survivors_501.jsonl"
+CANONICAL = PROJECT / "src/evaluation/canonical_automatic_metrics.py"
+PER_SAMPLE = ROOT / "per_sample_final_metrics.jsonl"
+SUMMARY = ROOT / "final_metric_summary.json"
+REPORT = ROOT / "final_metric_summary.md"
+MANIFEST = ROOT / "final_metric_manifest.json"
 
 METRICS = (
     "Entity F1",
